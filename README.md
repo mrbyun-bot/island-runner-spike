@@ -26,7 +26,7 @@ tools/ci/run_cases.sh           맥 러너 촬영 순서 (G1 → G2 → P0 → P
 tools/ci/pick_device.py         다이내믹 아일랜드가 있는 시뮬레이터 고르기
 tools/ci/push_results.sh        결과를 results 브랜치에 커밋·push, 실행 횟수 기록
 .github/workflows/spike.yml     클라우드 맥 워크플로 (손으로 실행)
-tools/analyze.py                (QC 담당, 아직 없음) 영상 판정
+tools/analyze.py                영상·스크린샷 판정 (G1·G2, J1~J5), 시험은 tools/test_analyze.py
 ```
 
 ## 결정 문서 할 일별 위치
