@@ -96,6 +96,7 @@ cd ~/island-runner-spike
 python3 tools/schedule.py          # 단계 표 + 겹침·빈 시간 0 검증, 실패하면 종료 코드 1
 python3 tools/schedule.py --json   # 같은 계산을 JSON 으로 (QC 분석 스크립트가 읽을 수 있음)
 python3 tools/fontgen.py           # Fonts/IRMaskEven.ttf, IRMaskOdd.ttf 생성 + ttx 덤프 + 검사
+# 서버에 `ttx` 명령이 없으면 `python3 -m fontTools.ttx <폰트>` 로 같은 덤프를 볼 수 있다
 python3 tools/fontgen.py --check   # 만들지 않고 검사만
 ```
 

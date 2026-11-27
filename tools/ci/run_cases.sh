@@ -146,7 +146,7 @@ if want p2; then
   settle 3
   to_background "p2_normal"
   settle 2
-  record p2_shape_normal 20 1 shape "한 바퀴 1.0초"
+  record p2_shape_normal 25 1 shape "한 바퀴 1.0초"
 
   launch_app -autostart -art shape -speedTier 2
   settle 3
