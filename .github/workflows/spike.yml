@@ -1,0 +1,155 @@
+# Live Activity 반복 애니메이션 스파이크: 빌드 → 단위 테스트 → 시뮬레이터 촬영 → 결과 저장
+# 손으로만 실행한다(workflow_dispatch). 맥 실행 상한 12회(사용자 결정 U3), 횟수는 results/RUNS.md.
+# 영상 분석(tools/analyze.py, QC 담당)은 맥이 아니라 리눅스 서버에서 한다(결정 D7).
+name: spike
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "찍을 단계 (all = G1→G2→P0→P1→P2→P3 모두)"
+        type: choice
+        options: [all, p0, p1, p2, p3]
+        default: all
+      include_max:
+        description: "12fps 최고 단계(0.333초)도 찍기 (빠름 합격 뒤에만)"
+        type: boolean
+        default: false
+      screenshots:
+        description: "녹화와 같이 연속 스크린샷 찍기"
+        type: boolean
+        default: true
+      runner:
+        description: "맥 러너 이미지"
+        type: choice
+        options: [macos-26, macos-15]
+        default: macos-26
+      xcode:
+        description: "Xcode 버전 (예: 26.1). 비우면 러너에 있는 가장 새 것"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spike
+  cancel-in-progress: false
+
+jobs:
+  spike:
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 50
+    env:
+      OUT: ${{ github.workspace }}/out
+      DERIVED: ${{ github.workspace }}/DerivedData
+    steps:
+      - name: 코드 받기
+        uses: actions/checkout@v4
+
+      - name: 결과 폴더 만들기
+        run: mkdir -p "$OUT"
+
+      - name: Xcode 고르기
+        id: xcode
+        run: |
+          if [ -n "${{ inputs.xcode }}" ]; then
+            XC="/Applications/Xcode_${{ inputs.xcode }}.app"
+          else
+            XC="$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)"
+          fi
+          sudo xcode-select -s "$XC/Contents/Developer"
+          { echo "runner=${{ inputs.runner }}"; echo "xcode_path=$XC"; xcodebuild -version; sw_vers; } | tee "$OUT/env.txt"
+          ls -d /Applications/Xcode_*.app >> "$OUT/env.txt"
+
+      - name: XcodeGen 설치
+        run: brew install xcodegen
+
+      - name: 프로젝트 만들기
+        run: |
+          xcodegen generate 2>&1 | tee "$OUT/xcodegen.log"
+          test -d IslandRunnerSpike.xcodeproj
+
+      - name: 시뮬레이터 고르기
+        id: device
+        run: |
+          python3 tools/ci/pick_device.py "$OUT/simctl-devices.json" | tee -a "$GITHUB_OUTPUT" | tee "$OUT/device.txt"
+          xcrun simctl list > "$OUT/simctl-list.txt"
+
+      - name: 빌드 (앱 + 위젯 확장 + 단위 테스트)
+        id: build
+        run: |
+          rc=0
+          xcodebuild -project IslandRunnerSpike.xcodeproj -scheme SpikeApp \
+            -destination "platform=iOS Simulator,id=${{ steps.device.outputs.udid }}" \
+            -derivedDataPath "$DERIVED" build-for-testing > "$OUT/build.log" 2>&1 || rc=$?
+          grep -E "error:|warning:|\*\* (BUILD|TEST)" "$OUT/build.log" | tail -80 || true
+          exit "$rc"
+
+      - name: 단위 테스트
+        id: test
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          xcodebuild -project IslandRunnerSpike.xcodeproj -scheme SpikeApp \
+            -destination "platform=iOS Simulator,id=${{ steps.device.outputs.udid }}" \
+            -derivedDataPath "$DERIVED" -resultBundlePath "$OUT/tests.xcresult" \
+            test-without-building 2>&1 | tee "$OUT/test.log"
+
+      - name: 시뮬레이터 부팅, 상태 막대 고정, 앱 설치
+        id: boot
+        if: steps.build.outcome == 'success'
+        run: |
+          UDID="${{ steps.device.outputs.udid }}"
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          # 시계·배터리 표시를 고정해 G1 대조 영상에 변화가 끼지 않게 한다
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 \
+            --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 || true
+          APP="$DERIVED/Build/Products/Debug-iphonesimulator/SpikeApp.app"
+          ls -la "$APP" "$APP/PlugIns" | tee "$OUT/app-bundle.txt"
+          ls -la "$APP"/PlugIns/*.appex | tee -a "$OUT/app-bundle.txt"
+          plutil -p "$APP/Info.plist" > "$OUT/app-info-plist.txt"
+          plutil -p "$APP"/PlugIns/RunnerLiveActivity.appex/Info.plist > "$OUT/appex-info-plist.txt"
+          xcrun simctl install "$UDID" "$APP"
+
+      - name: 촬영
+        id: capture
+        if: steps.boot.outcome == 'success'
+        timeout-minutes: 20
+        run: |
+          bash tools/ci/run_cases.sh "${{ steps.device.outputs.udid }}" "$OUT" \
+            "${{ inputs.stage }}" "${{ inputs.include_max }}" "${{ inputs.screenshots }}"
+
+      - name: 로그 모으기
+        if: always()
+        run: |
+          UDID="${{ steps.device.outputs.udid }}"
+          if [ -n "$UDID" ]; then
+            DATA="$(xcrun simctl get_app_container "$UDID" com.islandrunner.spike.app data 2>/dev/null || true)"
+            if [ -n "$DATA" ] && [ -f "$DATA/Documents/spike-log.txt" ]; then
+              cp "$DATA/Documents/spike-log.txt" "$OUT/app-log.txt"
+            fi
+            xcrun simctl spawn "$UDID" log show --last 40m --style compact \
+              --predicate 'subsystem == "com.islandrunner.spike"' > "$OUT/oslog-spike.txt" 2>&1 || true
+            xcrun simctl spawn "$UDID" log show --last 40m --style compact \
+              --predicate 'process CONTAINS "RunnerLiveActivity" OR eventMessage CONTAINS[c] "liveactivit"' \
+              > "$OUT/oslog-activity.txt" 2>&1 || true
+          fi
+          python3 tools/schedule.py > "$OUT/schedule.txt" || true
+          du -sh "$OUT" || true
+
+      - name: artifact 올리기
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spike-${{ github.run_number }}-${{ github.run_attempt }}
+          path: out/
+          retention-days: 30
+
+      - name: results 브랜치에 저장
+        if: always()
+        run: |
+          bash tools/ci/push_results.sh "$OUT" "${{ inputs.stage }}" \
+            "${{ steps.build.outcome }}" "${{ steps.test.outcome }}" "${{ steps.capture.outcome }}"

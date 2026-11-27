@@ -1,0 +1,6 @@
+IslandRunnerSpike.xcodeproj/
+Generated/
+DerivedData/
+results/
+*.xcresult
+__pycache__/

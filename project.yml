@@ -1,0 +1,120 @@
+# XcodeGen 프로젝트 정의. 리눅스에서는 이 파일만 고치고, 맥 러너에서 `xcodegen generate` 로
+# IslandRunnerSpike.xcodeproj 와 Generated/*.plist 를 만든다(둘 다 저장소에 넣지 않는다).
+# 타깃 3개: 앱(SpikeApp), Live Activity 위젯 확장(RunnerLiveActivity, 위젯은 1개만), 단위 테스트(SpikeTests)
+name: IslandRunnerSpike
+options:
+  bundleIdPrefix: com.islandrunner.spike
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  developmentLanguage: ko
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    # 시뮬레이터 전용 임시 서명(애플 개발자 계정 없음). 실기기 빌드는 가입 후 팀 ID 로 바꾼다.
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "0.1"
+targets:
+  SpikeApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Shared
+      - path: Fonts
+        excludes:
+          - "*.ttx"
+        buildPhase: resources
+      - path: Assets/frames
+        excludes:
+          - "src/**"
+          - "*.gif"
+          - "preview-*.png"
+        buildPhase: resources
+    info:
+      path: Generated/SpikeApp-Info.plist
+      properties:
+        CFBundleDisplayName: 러너 스파이크
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSSupportsLiveActivities: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        # 앱 미리보기도 같은 마스크 폰트를 쓴다
+        UIAppFonts:
+          - IRMaskEven.ttf
+          - IRMaskOdd.ttf
+        CFBundleURLTypes:
+          - CFBundleURLName: com.islandrunner.spike.app
+            CFBundleURLSchemes:
+              - islandrunner
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.islandrunner.spike.app
+        PRODUCT_NAME: SpikeApp
+    dependencies:
+      - target: RunnerLiveActivity
+        embed: true
+  RunnerLiveActivity:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: RunnerLiveActivity
+      - path: Shared
+      - path: Fonts
+        excludes:
+          - "*.ttx"
+        buildPhase: resources
+      - path: Assets/frames
+        excludes:
+          - "src/**"
+          - "*.gif"
+          - "preview-*.png"
+        buildPhase: resources
+    info:
+      path: Generated/RunnerLiveActivity-Info.plist
+      properties:
+        CFBundleDisplayName: 러너 스파이크 위젯
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        # 위젯 확장이 그릴 때 쓰는 마스크 폰트 (tools/fontgen.py 가 만든 파일)
+        UIAppFonts:
+          - IRMaskEven.ttf
+          - IRMaskOdd.ttf
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.islandrunner.spike.app.liveactivity
+        PRODUCT_NAME: RunnerLiveActivity
+        APPLICATION_EXTENSION_API_ONLY: "YES"
+  SpikeTests:
+    type: bundle.unit-test
+    platform: iOS
+    # 앱에 붙지 않는 단독 테스트. 프레임 배치 계산(순수 함수)만 본다.
+    sources:
+      - path: Tests
+      - path: Shared/FrameSchedule.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.islandrunner.spike.tests
+        GENERATE_INFOPLIST_FILE: "YES"
+schemes:
+  SpikeApp:
+    build:
+      targets:
+        SpikeApp: all
+        SpikeTests: [test]
+    test:
+      config: Debug
+      targets:
+        - SpikeTests
+    run:
+      config: Debug

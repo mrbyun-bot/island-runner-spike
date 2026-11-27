@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ttFont sfntVersion="\x00\x01\x00\x00" ttLibVersion="4.65">
+
+  <cmap>
+    <tableVersion version="0"/>
+    <cmap_format_4 platformID="0" platEncID="3" language="0">
+      <map code="0x20" name="blank"/><!-- SPACE -->
+      <map code="0x21" name="blank"/><!-- EXCLAMATION MARK -->
+      <map code="0x22" name="blank"/><!-- QUOTATION MARK -->
+      <map code="0x23" name="blank"/><!-- NUMBER SIGN -->
+      <map code="0x24" name="blank"/><!-- DOLLAR SIGN -->
+      <map code="0x25" name="blank"/><!-- PERCENT SIGN -->
+      <map code="0x26" name="blank"/><!-- AMPERSAND -->
+      <map code="0x27" name="blank"/><!-- APOSTROPHE -->
+      <map code="0x28" name="blank"/><!-- LEFT PARENTHESIS -->
+      <map code="0x29" name="blank"/><!-- RIGHT PARENTHESIS -->
+      <map code="0x2a" name="blank"/><!-- ASTERISK -->
+      <map code="0x2b" name="blank"/><!-- PLUS SIGN -->
+      <map code="0x2c" name="blank"/><!-- COMMA -->
+      <map code="0x2d" name="blank"/><!-- HYPHEN-MINUS -->
+      <map code="0x2e" name="blank"/><!-- FULL STOP -->
+      <map code="0x2f" name="blank"/><!-- SOLIDUS -->
+      <map code="0x30" name="empty_digit"/><!-- DIGIT ZERO -->
+      <map code="0x31" name="fill_digit"/><!-- DIGIT ONE -->
+      <map code="0x32" name="empty_digit"/><!-- DIGIT TWO -->
+      <map code="0x33" name="fill_digit"/><!-- DIGIT THREE -->
+      <map code="0x34" name="empty_digit"/><!-- DIGIT FOUR -->
+      <map code="0x35" name="fill_digit"/><!-- DIGIT FIVE -->
+      <map code="0x36" name="empty_digit"/><!-- DIGIT SIX -->
+      <map code="0x37" name="fill_digit"/><!-- DIGIT SEVEN -->
+      <map code="0x38" name="empty_digit"/><!-- DIGIT EIGHT -->
+      <map code="0x39" name="fill_digit"/><!-- DIGIT NINE -->
+      <map code="0x3a" name="blank"/><!-- COLON -->
+      <map code="0x3b" name="blank"/><!-- SEMICOLON -->
+      <map code="0x3c" name="blank"/><!-- LESS-THAN SIGN -->
+      <map code="0x3d" name="blank"/><!-- EQUALS SIGN -->
+      <map code="0x3e" name="blank"/><!-- GREATER-THAN SIGN -->
+      <map code="0x3f" name="blank"/><!-- QUESTION MARK -->
+      <map code="0x40" name="blank"/><!-- COMMERCIAL AT -->
+      <map code="0x41" name="blank"/><!-- LATIN CAPITAL LETTER A -->
+      <map code="0x42" name="blank"/><!-- LATIN CAPITAL LETTER B -->
+      <map code="0x43" name="blank"/><!-- LATIN CAPITAL LETTER C -->
+      <map code="0x44" name="blank"/><!-- LATIN CAPITAL LETTER D -->
+      <map code="0x45" name="blank"/><!-- LATIN CAPITAL LETTER E -->
+      <map code="0x46" name="blank"/><!-- LATIN CAPITAL LETTER F -->
+      <map code="0x47" name="blank"/><!-- LATIN CAPITAL LETTER G -->
+      <map code="0x48" name="blank"/><!-- LATIN CAPITAL LETTER H -->
+      <map code="0x49" name="blank"/><!-- LATIN CAPITAL LETTER I -->
+      <map code="0x4a" name="blank"/><!-- LATIN CAPITAL LETTER J -->
+      <map code="0x4b" name="blank"/><!-- LATIN CAPITAL LETTER K -->
+      <map code="0x4c" name="blank"/><!-- LATIN CAPITAL LETTER L -->
+      <map code="0x4d" name="blank"/><!-- LATIN CAPITAL LETTER M -->
+      <map code="0x4e" name="blank"/><!-- LATIN CAPITAL LETTER N -->
+      <map code="0x4f" name="blank"/><!-- LATIN CAPITAL LETTER O -->
+      <map code="0x50" name="blank"/><!-- LATIN CAPITAL LETTER P -->
+      <map code="0x51" name="blank"/><!-- LATIN CAPITAL LETTER Q -->
+      <map code="0x52" name="blank"/><!-- LATIN CAPITAL LETTER R -->
+      <map code="0x53" name="blank"/><!-- LATIN CAPITAL LETTER S -->
+      <map code="0x54" name="blank"/><!-- LATIN CAPITAL LETTER T -->
+      <map code="0x55" name="blank"/><!-- LATIN CAPITAL LETTER U -->
+      <map code="0x56" name="blank"/><!-- LATIN CAPITAL LETTER V -->
+      <map code="0x57" name="blank"/><!-- LATIN CAPITAL LETTER W -->
+      <map code="0x58" name="blank"/><!-- LATIN CAPITAL LETTER X -->
+      <map code="0x59" name="blank"/><!-- LATIN CAPITAL LETTER Y -->
+      <map code="0x5a" name="blank"/><!-- LATIN CAPITAL LETTER Z -->
+      <map code="0x5b" name="blank"/><!-- LEFT SQUARE BRACKET -->
+      <map code="0x5c" name="blank"/><!-- REVERSE SOLIDUS -->
+      <map code="0x5d" name="blank"/><!-- RIGHT SQUARE BRACKET -->
+      <map code="0x5e" name="blank"/><!-- CIRCUMFLEX ACCENT -->
+      <map code="0x5f" name="blank"/><!-- LOW LINE -->
+      <map code="0x60" name="blank"/><!-- GRAVE ACCENT -->
+      <map code="0x61" name="blank"/><!-- LATIN SMALL LETTER A -->
+      <map code="0x62" name="blank"/><!-- LATIN SMALL LETTER B -->
+      <map code="0x63" name="blank"/><!-- LATIN SMALL LETTER C -->
+      <map code="0x64" name="blank"/><!-- LATIN SMALL LETTER D -->
+      <map code="0x65" name="blank"/><!-- LATIN SMALL LETTER E -->
+      <map code="0x66" name="blank"/><!-- LATIN SMALL LETTER F -->
+      <map code="0x67" name="blank"/><!-- LATIN SMALL LETTER G -->
+      <map code="0x68" name="blank"/><!-- LATIN SMALL LETTER H -->
+      <map code="0x69" name="blank"/><!-- LATIN SMALL LETTER I -->
+      <map code="0x6a" name="blank"/><!-- LATIN SMALL LETTER J -->
+      <map code="0x6b" name="blank"/><!-- LATIN SMALL LETTER K -->
+      <map code="0x6c" name="blank"/><!-- LATIN SMALL LETTER L -->
+      <map code="0x6d" name="blank"/><!-- LATIN SMALL LETTER M -->
+      <map code="0x6e" name="blank"/><!-- LATIN SMALL LETTER N -->
+      <map code="0x6f" name="blank"/><!-- LATIN SMALL LETTER O -->
+      <map code="0x70" name="blank"/><!-- LATIN SMALL LETTER P -->
+      <map code="0x71" name="blank"/><!-- LATIN SMALL LETTER Q -->
+      <map code="0x72" name="blank"/><!-- LATIN SMALL LETTER R -->
+      <map code="0x73" name="blank"/><!-- LATIN SMALL LETTER S -->
+      <map code="0x74" name="blank"/><!-- LATIN SMALL LETTER T -->
+      <map code="0x75" name="blank"/><!-- LATIN SMALL LETTER U -->
+      <map code="0x76" name="blank"/><!-- LATIN SMALL LETTER V -->
+      <map code="0x77" name="blank"/><!-- LATIN SMALL LETTER W -->
+      <map code="0x78" name="blank"/><!-- LATIN SMALL LETTER X -->
+      <map code="0x79" name="blank"/><!-- LATIN SMALL LETTER Y -->
+      <map code="0x7a" name="blank"/><!-- LATIN SMALL LETTER Z -->
+      <map code="0x7b" name="blank"/><!-- LEFT CURLY BRACKET -->
+      <map code="0x7c" name="blank"/><!-- VERTICAL LINE -->
+      <map code="0x7d" name="blank"/><!-- RIGHT CURLY BRACKET -->
+      <map code="0x7e" name="blank"/><!-- TILDE -->
+      <map code="0xa0" name="blank"/><!-- NO-BREAK SPACE -->
+      <map code="0x61c" name="blank"/><!-- ARABIC LETTER MARK -->
+      <map code="0x660" name="empty_digit"/><!-- ARABIC-INDIC DIGIT ZERO -->
+      <map code="0x661" name="fill_digit"/><!-- ARABIC-INDIC DIGIT ONE -->
+      <map code="0x662" name="empty_digit"/><!-- ARABIC-INDIC DIGIT TWO -->
+      <map code="0x663" name="fill_digit"/><!-- ARABIC-INDIC DIGIT THREE -->
+      <map code="0x664" name="empty_digit"/><!-- ARABIC-INDIC DIGIT FOUR -->
+      <map code="0x665" name="fill_digit"/><!-- ARABIC-INDIC DIGIT FIVE -->
+      <map code="0x666" name="empty_digit"/><!-- ARABIC-INDIC DIGIT SIX -->
+      <map code="0x667" name="fill_digit"/><!-- ARABIC-INDIC DIGIT SEVEN -->
+      <map code="0x668" name="empty_digit"/><!-- ARABIC-INDIC DIGIT EIGHT -->
+      <map code="0x669" name="fill_digit"/><!-- ARABIC-INDIC DIGIT NINE -->
+      <map code="0x66b" name="blank"/><!-- ARABIC DECIMAL SEPARATOR -->
+      <map code="0x66c" name="blank"/><!-- ARABIC THOUSANDS SEPARATOR -->
+      <map code="0x6f0" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT ZERO -->
+      <map code="0x6f1" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT ONE -->
+      <map code="0x6f2" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT TWO -->
+      <map code="0x6f3" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT THREE -->
+      <map code="0x6f4" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT FOUR -->
+      <map code="0x6f5" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT FIVE -->
+      <map code="0x6f6" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT SIX -->
+      <map code="0x6f7" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT SEVEN -->
+      <map code="0x6f8" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT EIGHT -->
+      <map code="0x6f9" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT NINE -->
+      <map code="0x966" name="empty_digit"/><!-- DEVANAGARI DIGIT ZERO -->
+      <map code="0x967" name="fill_digit"/><!-- DEVANAGARI DIGIT ONE -->
+      <map code="0x968" name="empty_digit"/><!-- DEVANAGARI DIGIT TWO -->
+      <map code="0x969" name="fill_digit"/><!-- DEVANAGARI DIGIT THREE -->
+      <map code="0x96a" name="empty_digit"/><!-- DEVANAGARI DIGIT FOUR -->
+      <map code="0x96b" name="fill_digit"/><!-- DEVANAGARI DIGIT FIVE -->
+      <map code="0x96c" name="empty_digit"/><!-- DEVANAGARI DIGIT SIX -->
+      <map code="0x96d" name="fill_digit"/><!-- DEVANAGARI DIGIT SEVEN -->
+      <map code="0x96e" name="empty_digit"/><!-- DEVANAGARI DIGIT EIGHT -->
+      <map code="0x96f" name="fill_digit"/><!-- DEVANAGARI DIGIT NINE -->
+      <map code="0x2007" name="blank"/><!-- FIGURE SPACE -->
+      <map code="0x2008" name="blank"/><!-- PUNCTUATION SPACE -->
+      <map code="0x2009" name="blank"/><!-- THIN SPACE -->
+      <map code="0x200a" name="blank"/><!-- HAIR SPACE -->
+      <map code="0x200b" name="blank"/><!-- ZERO WIDTH SPACE -->
+      <map code="0x200e" name="blank"/><!-- LEFT-TO-RIGHT MARK -->
+      <map code="0x200f" name="blank"/><!-- RIGHT-TO-LEFT MARK -->
+      <map code="0x202f" name="blank"/><!-- NARROW NO-BREAK SPACE -->
+      <map code="0x2066" name="blank"/><!-- LEFT-TO-RIGHT ISOLATE -->
+      <map code="0x2067" name="blank"/><!-- RIGHT-TO-LEFT ISOLATE -->
+      <map code="0x2068" name="blank"/><!-- FIRST STRONG ISOLATE -->
+      <map code="0x2069" name="blank"/><!-- POP DIRECTIONAL ISOLATE -->
+      <map code="0x2212" name="blank"/><!-- MINUS SIGN -->
+      <map code="0x2236" name="blank"/><!-- RATIO -->
+      <map code="0xff10" name="empty_digit"/><!-- FULLWIDTH DIGIT ZERO -->
+      <map code="0xff11" name="fill_digit"/><!-- FULLWIDTH DIGIT ONE -->
+      <map code="0xff12" name="empty_digit"/><!-- FULLWIDTH DIGIT TWO -->
+      <map code="0xff13" name="fill_digit"/><!-- FULLWIDTH DIGIT THREE -->
+      <map code="0xff14" name="empty_digit"/><!-- FULLWIDTH DIGIT FOUR -->
+      <map code="0xff15" name="fill_digit"/><!-- FULLWIDTH DIGIT FIVE -->
+      <map code="0xff16" name="empty_digit"/><!-- FULLWIDTH DIGIT SIX -->
+      <map code="0xff17" name="fill_digit"/><!-- FULLWIDTH DIGIT SEVEN -->
+      <map code="0xff18" name="empty_digit"/><!-- FULLWIDTH DIGIT EIGHT -->
+      <map code="0xff19" name="fill_digit"/><!-- FULLWIDTH DIGIT NINE -->
+      <map code="0xff1a" name="blank"/><!-- FULLWIDTH COLON -->
+    </cmap_format_4>
+    <cmap_format_4 platformID="3" platEncID="1" language="0">
+      <map code="0x20" name="blank"/><!-- SPACE -->
+      <map code="0x21" name="blank"/><!-- EXCLAMATION MARK -->
+      <map code="0x22" name="blank"/><!-- QUOTATION MARK -->
+      <map code="0x23" name="blank"/><!-- NUMBER SIGN -->
+      <map code="0x24" name="blank"/><!-- DOLLAR SIGN -->
+      <map code="0x25" name="blank"/><!-- PERCENT SIGN -->
+      <map code="0x26" name="blank"/><!-- AMPERSAND -->
+      <map code="0x27" name="blank"/><!-- APOSTROPHE -->
+      <map code="0x28" name="blank"/><!-- LEFT PARENTHESIS -->
+      <map code="0x29" name="blank"/><!-- RIGHT PARENTHESIS -->
+      <map code="0x2a" name="blank"/><!-- ASTERISK -->
+      <map code="0x2b" name="blank"/><!-- PLUS SIGN -->
+      <map code="0x2c" name="blank"/><!-- COMMA -->
+      <map code="0x2d" name="blank"/><!-- HYPHEN-MINUS -->
+      <map code="0x2e" name="blank"/><!-- FULL STOP -->
+      <map code="0x2f" name="blank"/><!-- SOLIDUS -->
+      <map code="0x30" name="empty_digit"/><!-- DIGIT ZERO -->
+      <map code="0x31" name="fill_digit"/><!-- DIGIT ONE -->
+      <map code="0x32" name="empty_digit"/><!-- DIGIT TWO -->
+      <map code="0x33" name="fill_digit"/><!-- DIGIT THREE -->
+      <map code="0x34" name="empty_digit"/><!-- DIGIT FOUR -->
+      <map code="0x35" name="fill_digit"/><!-- DIGIT FIVE -->
+      <map code="0x36" name="empty_digit"/><!-- DIGIT SIX -->
+      <map code="0x37" name="fill_digit"/><!-- DIGIT SEVEN -->
+      <map code="0x38" name="empty_digit"/><!-- DIGIT EIGHT -->
+      <map code="0x39" name="fill_digit"/><!-- DIGIT NINE -->
+      <map code="0x3a" name="blank"/><!-- COLON -->
+      <map code="0x3b" name="blank"/><!-- SEMICOLON -->
+      <map code="0x3c" name="blank"/><!-- LESS-THAN SIGN -->
+      <map code="0x3d" name="blank"/><!-- EQUALS SIGN -->
+      <map code="0x3e" name="blank"/><!-- GREATER-THAN SIGN -->
+      <map code="0x3f" name="blank"/><!-- QUESTION MARK -->
+      <map code="0x40" name="blank"/><!-- COMMERCIAL AT -->
+      <map code="0x41" name="blank"/><!-- LATIN CAPITAL LETTER A -->
+      <map code="0x42" name="blank"/><!-- LATIN CAPITAL LETTER B -->
+      <map code="0x43" name="blank"/><!-- LATIN CAPITAL LETTER C -->
+      <map code="0x44" name="blank"/><!-- LATIN CAPITAL LETTER D -->
+      <map code="0x45" name="blank"/><!-- LATIN CAPITAL LETTER E -->
+      <map code="0x46" name="blank"/><!-- LATIN CAPITAL LETTER F -->
+      <map code="0x47" name="blank"/><!-- LATIN CAPITAL LETTER G -->
+      <map code="0x48" name="blank"/><!-- LATIN CAPITAL LETTER H -->
+      <map code="0x49" name="blank"/><!-- LATIN CAPITAL LETTER I -->
+      <map code="0x4a" name="blank"/><!-- LATIN CAPITAL LETTER J -->
+      <map code="0x4b" name="blank"/><!-- LATIN CAPITAL LETTER K -->
+      <map code="0x4c" name="blank"/><!-- LATIN CAPITAL LETTER L -->
+      <map code="0x4d" name="blank"/><!-- LATIN CAPITAL LETTER M -->
+      <map code="0x4e" name="blank"/><!-- LATIN CAPITAL LETTER N -->
+      <map code="0x4f" name="blank"/><!-- LATIN CAPITAL LETTER O -->
+      <map code="0x50" name="blank"/><!-- LATIN CAPITAL LETTER P -->
+      <map code="0x51" name="blank"/><!-- LATIN CAPITAL LETTER Q -->
+      <map code="0x52" name="blank"/><!-- LATIN CAPITAL LETTER R -->
+      <map code="0x53" name="blank"/><!-- LATIN CAPITAL LETTER S -->
+      <map code="0x54" name="blank"/><!-- LATIN CAPITAL LETTER T -->
+      <map code="0x55" name="blank"/><!-- LATIN CAPITAL LETTER U -->
+      <map code="0x56" name="blank"/><!-- LATIN CAPITAL LETTER V -->
+      <map code="0x57" name="blank"/><!-- LATIN CAPITAL LETTER W -->
+      <map code="0x58" name="blank"/><!-- LATIN CAPITAL LETTER X -->
+      <map code="0x59" name="blank"/><!-- LATIN CAPITAL LETTER Y -->
+      <map code="0x5a" name="blank"/><!-- LATIN CAPITAL LETTER Z -->
+      <map code="0x5b" name="blank"/><!-- LEFT SQUARE BRACKET -->
+      <map code="0x5c" name="blank"/><!-- REVERSE SOLIDUS -->
+      <map code="0x5d" name="blank"/><!-- RIGHT SQUARE BRACKET -->
+      <map code="0x5e" name="blank"/><!-- CIRCUMFLEX ACCENT -->
+      <map code="0x5f" name="blank"/><!-- LOW LINE -->
+      <map code="0x60" name="blank"/><!-- GRAVE ACCENT -->
+      <map code="0x61" name="blank"/><!-- LATIN SMALL LETTER A -->
+      <map code="0x62" name="blank"/><!-- LATIN SMALL LETTER B -->
+      <map code="0x63" name="blank"/><!-- LATIN SMALL LETTER C -->
+      <map code="0x64" name="blank"/><!-- LATIN SMALL LETTER D -->
+      <map code="0x65" name="blank"/><!-- LATIN SMALL LETTER E -->
+      <map code="0x66" name="blank"/><!-- LATIN SMALL LETTER F -->
+      <map code="0x67" name="blank"/><!-- LATIN SMALL LETTER G -->
+      <map code="0x68" name="blank"/><!-- LATIN SMALL LETTER H -->
+      <map code="0x69" name="blank"/><!-- LATIN SMALL LETTER I -->
+      <map code="0x6a" name="blank"/><!-- LATIN SMALL LETTER J -->
+      <map code="0x6b" name="blank"/><!-- LATIN SMALL LETTER K -->
+      <map code="0x6c" name="blank"/><!-- LATIN SMALL LETTER L -->
+      <map code="0x6d" name="blank"/><!-- LATIN SMALL LETTER M -->
+      <map code="0x6e" name="blank"/><!-- LATIN SMALL LETTER N -->
+      <map code="0x6f" name="blank"/><!-- LATIN SMALL LETTER O -->
+      <map code="0x70" name="blank"/><!-- LATIN SMALL LETTER P -->
+      <map code="0x71" name="blank"/><!-- LATIN SMALL LETTER Q -->
+      <map code="0x72" name="blank"/><!-- LATIN SMALL LETTER R -->
+      <map code="0x73" name="blank"/><!-- LATIN SMALL LETTER S -->
+      <map code="0x74" name="blank"/><!-- LATIN SMALL LETTER T -->
+      <map code="0x75" name="blank"/><!-- LATIN SMALL LETTER U -->
+      <map code="0x76" name="blank"/><!-- LATIN SMALL LETTER V -->
+      <map code="0x77" name="blank"/><!-- LATIN SMALL LETTER W -->
+      <map code="0x78" name="blank"/><!-- LATIN SMALL LETTER X -->
+      <map code="0x79" name="blank"/><!-- LATIN SMALL LETTER Y -->
+      <map code="0x7a" name="blank"/><!-- LATIN SMALL LETTER Z -->
+      <map code="0x7b" name="blank"/><!-- LEFT CURLY BRACKET -->
+      <map code="0x7c" name="blank"/><!-- VERTICAL LINE -->
+      <map code="0x7d" name="blank"/><!-- RIGHT CURLY BRACKET -->
+      <map code="0x7e" name="blank"/><!-- TILDE -->
+      <map code="0xa0" name="blank"/><!-- NO-BREAK SPACE -->
+      <map code="0x61c" name="blank"/><!-- ARABIC LETTER MARK -->
+      <map code="0x660" name="empty_digit"/><!-- ARABIC-INDIC DIGIT ZERO -->
+      <map code="0x661" name="fill_digit"/><!-- ARABIC-INDIC DIGIT ONE -->
+      <map code="0x662" name="empty_digit"/><!-- ARABIC-INDIC DIGIT TWO -->
+      <map code="0x663" name="fill_digit"/><!-- ARABIC-INDIC DIGIT THREE -->
+      <map code="0x664" name="empty_digit"/><!-- ARABIC-INDIC DIGIT FOUR -->
+      <map code="0x665" name="fill_digit"/><!-- ARABIC-INDIC DIGIT FIVE -->
+      <map code="0x666" name="empty_digit"/><!-- ARABIC-INDIC DIGIT SIX -->
+      <map code="0x667" name="fill_digit"/><!-- ARABIC-INDIC DIGIT SEVEN -->
+      <map code="0x668" name="empty_digit"/><!-- ARABIC-INDIC DIGIT EIGHT -->
+      <map code="0x669" name="fill_digit"/><!-- ARABIC-INDIC DIGIT NINE -->
+      <map code="0x66b" name="blank"/><!-- ARABIC DECIMAL SEPARATOR -->
+      <map code="0x66c" name="blank"/><!-- ARABIC THOUSANDS SEPARATOR -->
+      <map code="0x6f0" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT ZERO -->
+      <map code="0x6f1" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT ONE -->
+      <map code="0x6f2" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT TWO -->
+      <map code="0x6f3" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT THREE -->
+      <map code="0x6f4" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT FOUR -->
+      <map code="0x6f5" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT FIVE -->
+      <map code="0x6f6" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT SIX -->
+      <map code="0x6f7" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT SEVEN -->
+      <map code="0x6f8" name="empty_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT EIGHT -->
+      <map code="0x6f9" name="fill_digit"/><!-- EXTENDED ARABIC-INDIC DIGIT NINE -->
+      <map code="0x966" name="empty_digit"/><!-- DEVANAGARI DIGIT ZERO -->
+      <map code="0x967" name="fill_digit"/><!-- DEVANAGARI DIGIT ONE -->
+      <map code="0x968" name="empty_digit"/><!-- DEVANAGARI DIGIT TWO -->
+      <map code="0x969" name="fill_digit"/><!-- DEVANAGARI DIGIT THREE -->
+      <map code="0x96a" name="empty_digit"/><!-- DEVANAGARI DIGIT FOUR -->
+      <map code="0x96b" name="fill_digit"/><!-- DEVANAGARI DIGIT FIVE -->
+      <map code="0x96c" name="empty_digit"/><!-- DEVANAGARI DIGIT SIX -->
+      <map code="0x96d" name="fill_digit"/><!-- DEVANAGARI DIGIT SEVEN -->
+      <map code="0x96e" name="empty_digit"/><!-- DEVANAGARI DIGIT EIGHT -->
+      <map code="0x96f" name="fill_digit"/><!-- DEVANAGARI DIGIT NINE -->
+      <map code="0x2007" name="blank"/><!-- FIGURE SPACE -->
+      <map code="0x2008" name="blank"/><!-- PUNCTUATION SPACE -->
+      <map code="0x2009" name="blank"/><!-- THIN SPACE -->
+      <map code="0x200a" name="blank"/><!-- HAIR SPACE -->
+      <map code="0x200b" name="blank"/><!-- ZERO WIDTH SPACE -->
+      <map code="0x200e" name="blank"/><!-- LEFT-TO-RIGHT MARK -->
+      <map code="0x200f" name="blank"/><!-- RIGHT-TO-LEFT MARK -->
+      <map code="0x202f" name="blank"/><!-- NARROW NO-BREAK SPACE -->
+      <map code="0x2066" name="blank"/><!-- LEFT-TO-RIGHT ISOLATE -->
+      <map code="0x2067" name="blank"/><!-- RIGHT-TO-LEFT ISOLATE -->
+      <map code="0x2068" name="blank"/><!-- FIRST STRONG ISOLATE -->
+      <map code="0x2069" name="blank"/><!-- POP DIRECTIONAL ISOLATE -->
+      <map code="0x2212" name="blank"/><!-- MINUS SIGN -->
+      <map code="0x2236" name="blank"/><!-- RATIO -->
+      <map code="0xff10" name="empty_digit"/><!-- FULLWIDTH DIGIT ZERO -->
+      <map code="0xff11" name="fill_digit"/><!-- FULLWIDTH DIGIT ONE -->
+      <map code="0xff12" name="empty_digit"/><!-- FULLWIDTH DIGIT TWO -->
+      <map code="0xff13" name="fill_digit"/><!-- FULLWIDTH DIGIT THREE -->
+      <map code="0xff14" name="empty_digit"/><!-- FULLWIDTH DIGIT FOUR -->
+      <map code="0xff15" name="fill_digit"/><!-- FULLWIDTH DIGIT FIVE -->
+      <map code="0xff16" name="empty_digit"/><!-- FULLWIDTH DIGIT SIX -->
+      <map code="0xff17" name="fill_digit"/><!-- FULLWIDTH DIGIT SEVEN -->
+      <map code="0xff18" name="empty_digit"/><!-- FULLWIDTH DIGIT EIGHT -->
+      <map code="0xff19" name="fill_digit"/><!-- FULLWIDTH DIGIT NINE -->
+      <map code="0xff1a" name="blank"/><!-- FULLWIDTH COLON -->
+    </cmap_format_4>
+  </cmap>
+
+  <hmtx>
+    <mtx name=".notdef" width="0" lsb="0"/>
+    <mtx name="blank" width="0" lsb="0"/>
+    <mtx name="empty_digit" width="1000" lsb="0"/>
+    <mtx name="fill_digit" width="1000" lsb="0"/>
+  </hmtx>
+
+  <GlyphOrder>
+    <!-- The 'id' attribute is only for humans; it is ignored when parsed. -->
+    <GlyphID id="0" name=".notdef"/>
+    <GlyphID id="1" name="blank"/>
+    <GlyphID id="2" name="fill_digit"/>
+    <GlyphID id="3" name="empty_digit"/>
+  </GlyphOrder>
+
+  <name>
+    <namerecord nameID="0" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      Island Runner spike, original mask font (no third-party outlines)
+    </namerecord>
+    <namerecord nameID="1" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      IRMaskOdd
+    </namerecord>
+    <namerecord nameID="2" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      Regular
+    </namerecord>
+    <namerecord nameID="3" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      IRMaskOdd-spike-1
+    </namerecord>
+    <namerecord nameID="4" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      IRMaskOdd
+    </namerecord>
+    <namerecord nameID="5" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      Version 1.000
+    </namerecord>
+    <namerecord nameID="6" platformID="1" platEncID="0" langID="0x0" unicode="True">
+      IRMaskOdd
+    </namerecord>
+    <namerecord nameID="0" platformID="3" platEncID="1" langID="0x409">
+      Island Runner spike, original mask font (no third-party outlines)
+    </namerecord>
+    <namerecord nameID="1" platformID="3" platEncID="1" langID="0x409">
+      IRMaskOdd
+    </namerecord>
+    <namerecord nameID="2" platformID="3" platEncID="1" langID="0x409">
+      Regular
+    </namerecord>
+    <namerecord nameID="3" platformID="3" platEncID="1" langID="0x409">
+      IRMaskOdd-spike-1
+    </namerecord>
+    <namerecord nameID="4" platformID="3" platEncID="1" langID="0x409">
+      IRMaskOdd
+    </namerecord>
+    <namerecord nameID="5" platformID="3" platEncID="1" langID="0x409">
+      Version 1.000
+    </namerecord>
+    <namerecord nameID="6" platformID="3" platEncID="1" langID="0x409">
+      IRMaskOdd
+    </namerecord>
+  </name>
+
+</ttFont>
