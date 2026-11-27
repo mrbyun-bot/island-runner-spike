@@ -7,10 +7,10 @@ on:
   workflow_dispatch:
     inputs:
       stage:
-        description: "찍을 단계 (all = G1→G2→P0→P1→P2→P3 모두)"
+        description: "찍을 단계 (probe = 2회차 원인 가르기 묶음, all = G1→G2→P0→P1→P2→P3 모두)"
         type: choice
-        options: [all, p0, p1, p2, p3]
-        default: all
+        options: [probe, all, p0, p1, p2, p3]
+        default: probe
       include_max:
         description: "12fps 최고 단계(0.333초)도 찍기 (빠름 합격 뒤에만)"
         type: boolean
@@ -131,8 +131,19 @@ jobs:
             if [ -n "$DATA" ] && [ -f "$DATA/Documents/spike-log.txt" ]; then
               cp "$DATA/Documents/spike-log.txt" "$OUT/app-log.txt"
             fi
-            xcrun simctl spawn "$UDID" log show --last 40m --style compact \
-              --predicate 'subsystem == "com.islandrunner.spike"' > "$OUT/oslog-spike.txt" 2>&1 || true
+            # 확장 파일 로그: 확장 전용 데이터 폴더의 Documents/widget-log.txt (RunnerLiveActivity/WidgetLog.swift)
+            EXT_DATA="$(xcrun simctl get_app_container "$UDID" com.islandrunner.spike.app.liveactivity data 2>/dev/null || true)"
+            echo "get_app_container(appex)=${EXT_DATA:-없음}" > "$OUT/widget-log-where.txt"
+            find "$HOME/Library/Developer/CoreSimulator/Devices/$UDID/data" -name widget-log.txt 2>/dev/null \
+              | tee -a "$OUT/widget-log-where.txt" | head -1 | while read -r f; do cp "$f" "$OUT/widget-log.txt"; done || true
+            # 1회차에는 --info 가 없어 Logger.info 줄이 0건이었다. 2회차부터 notice 로 남기고 info·debug 도 같이 본다.
+            xcrun simctl spawn "$UDID" log show --last 40m --info --debug --style compact \
+              --predicate 'subsystem == "com.islandrunner.spike" OR eventMessage BEGINSWITH "IRSPIKE"' \
+              > "$OUT/oslog-spike.txt" 2>&1 || true
+            # 아카이브를 실제로 그리는 쪽(WidgetRenderer_Activities)과 확장 프로세스 전체
+            xcrun simctl spawn "$UDID" log show --last 40m --info --style compact \
+              --predicate 'process == "WidgetRenderer_Activities" OR process == "RunnerLiveActivity"' \
+              > "$OUT/oslog-renderer.txt" 2>&1 || true
             xcrun simctl spawn "$UDID" log show --last 40m --style compact \
               --predicate 'process CONTAINS "RunnerLiveActivity" OR eventMessage CONTAINS[c] "liveactivit"' \
               > "$OUT/oslog-activity.txt" 2>&1 || true

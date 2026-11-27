@@ -20,7 +20,8 @@ public struct RunnerAttributes: ActivityAttributes {
     /// 그림 묶음: "shape"(P1·P2, 1색 도형 4장) 또는 "hamster"(P3)
     public var art: String
     /// 표시 방식: "sprite"(기본, 마스크 애니메이션), "p0"(타이머 글자 1개만 흰색으로 보임),
-    /// "still"(정지 포즈 강제, J8 미리보기)
+    /// "still"(정지 포즈 강제, J8 미리보기), 2회차 시험 모드 "probe0"~"probe3", "p0w", "spritew"
+    /// (전체 목록 SpikeConstants.modes, 뜻은 Shared/SpriteView.swift 머리말)
     public var mode: String
 
     public init(art: String, mode: String) {
@@ -61,4 +62,6 @@ public enum SpikeConstants {
     public static let fontFiles = ["IRMaskEven.ttf", "IRMaskOdd.ttf"]
     /// 축소 칸 캐릭터 크기(pt). 그림은 @3x 108px 이므로 표시 크기와 정확히 같다.
     public static let compactSize: CGFloat = 36
+    /// 실행 인자 -mode 로 받을 수 있는 값 (뜻은 Shared/SpriteView.swift 머리말)
+    public static let modes = ["sprite", "spritew", "p0", "p0w", "still", "probe0", "probe1", "probe2", "probe3"]
 }

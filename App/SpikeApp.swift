@@ -4,7 +4,7 @@
 //   -autostart            켜지자마자 Activity.request (이미 있으면 갱신)
 //   -speedTier N          0 쉼, 1 보통, 2 빠름, 3 최고(12fps)
 //   -art shape|hamster    그림 묶음 (기본 shape)
-//   -mode sprite|p0|still 표시 방식 (기본 sprite)
+//   -mode <방식>          sprite(기본)|spritew|p0|p0w|still|probe0|probe1|probe2|probe3 (SpikeConstants.modes)
 //   -reset                시작 전에 있던 활동을 모두 끝냄
 //   -calibrate [Hz]       교정 화면(두 색 교대, 기본 8Hz). G2 녹화 검증용
 // 주소로 단계 바꾸기 (앱이 앞으로 나오며 갱신): xcrun simctl openurl <기기> islandrunner://tier/2
@@ -29,7 +29,7 @@ struct LaunchOptions {
         o.reset = args.contains("-reset")
         if let v = value(after: "-speedTier"), let n = Int(v) { o.speedTier = FrameSchedule.clampTier(n) }
         if let v = value(after: "-art"), ["shape", "hamster"].contains(v) { o.art = v }
-        if let v = value(after: "-mode"), ["sprite", "p0", "still"].contains(v) { o.mode = v }
+        if let v = value(after: "-mode"), SpikeConstants.modes.contains(v) { o.mode = v }
         if args.contains("-calibrate") {
             o.calibrateHz = value(after: "-calibrate").flatMap(Double.init) ?? 8
         }

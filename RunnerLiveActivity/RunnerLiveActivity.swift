@@ -2,11 +2,8 @@
 // (위젯이 여러 개면 아일랜드가 안 뜬다는 보고를 피하려는 결정 문서 L1).
 
 import ActivityKit
-import os
 import SwiftUI
 import WidgetKit
-
-private let log = Logger(subsystem: SpikeConstants.logSubsystem, category: "widget")
 
 @main
 struct RunnerLiveActivity: Widget {
@@ -46,7 +43,8 @@ struct RunnerLiveActivity: Widget {
 
     private func sprite(_ context: ActivityViewContext<RunnerAttributes>, place: String) -> some View {
         let plan = FrameSchedule.plan(tier: context.state.speedTier)
-        log.info("render \(place, privacy: .public) tier=\(plan.tier) timers=\(plan.timerTextCount) art=\(context.attributes.art, privacy: .public) mode=\(context.attributes.mode, privacy: .public) anchor=\(context.state.anchor.timeIntervalSince1970)")
+        _ = WidgetLog.startupCheck
+        WidgetLog.write("render", "\(place) tier=\(plan.tier) timers=\(plan.timerTextCount) art=\(context.attributes.art) mode=\(context.attributes.mode) anchor=\(context.state.anchor.timeIntervalSince1970)")
         return RunnerSprite(tier: context.state.speedTier, anchor: context.state.anchor,
                             art: context.attributes.art, mode: context.attributes.mode,
                             size: SpikeConstants.compactSize)

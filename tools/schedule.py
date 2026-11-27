@@ -106,6 +106,63 @@ def verify(p, cycles=3):
             "hold_set": sorted(set(holds)), "loop_set": sorted(set(loops)), "order_ok": order_ok}
 
 
+def swift_div(a, b):
+    """Swift Int `/`: 0 쪽으로 버림 (-15 / 8 = -1). 파이썬 // 와 음수에서 다르다."""
+    q = abs(a) // abs(b)
+    return q if (a >= 0) == (b > 0) else -q
+
+
+def swift_mod(a, b):
+    """Swift Int `%`: 부호가 왼쪽 수를 따른다 (-3 % 2 = -1)."""
+    return a - b * swift_div(a, b)
+
+
+def swift_is_open(cond, fps, w):
+    """FrameSchedule.isOpen 을 Swift 정수 규칙 그대로 옮긴 것."""
+    s = floor(w - Fraction(cond["offsetCells"], fps))
+    even = swift_mod(swift_mod(s, 2) + 2, 2) == 0
+    return even if cond["parity"] == "even" else not even
+
+
+def swift_designed(p, w, fixed=True):
+    """FrameSchedule.designedFrame 을 Swift 정수 규칙으로. fixed=False 는 1회차 코드(cell / holdCells)."""
+    cell = floor(w * p["gridFPS"])
+    n, hold = p["frameCount"], p["holdCells"]
+    h = swift_div(cell, hold)
+    if fixed and swift_mod(cell, hold) != 0 and cell < 0:   # FrameSchedule.floorDiv
+        h -= 1
+    return swift_mod(swift_mod(h, n) + n, n)
+
+
+def verify_swift(p, cycles=3, sub=10):
+    """Swift 단위 테스트(testExactlyOneFrameVisibleAndMatchesDesign)와 같은 점을 Swift 정수 규칙으로 훑는다.
+    돌려주는 값: (고친 코드 불일치 수, 1회차 코드 불일치 수, Swift isOpen 과 파이썬 is_open 불일치 수, 가장 작은 w)"""
+    fps = p["gridFPS"]
+    bad_fixed = bad_old = bad_open = 0
+    first_w = None
+    for k in range(-CYCLE_SECONDS * fps * sub, cycles * CYCLE_SECONDS * fps * sub):
+        w = (k + Fraction(1, 2)) / (fps * sub)
+        first_w = w if first_w is None else first_w
+        v_swift = [i for i, cells in enumerate(p["frames"])
+                   if any(all(swift_is_open(c, fps, w) for c in cell["conditions"]) for cell in cells)]
+        if v_swift != visible(p, w):
+            bad_open += 1
+        if v_swift != [swift_designed(p, w, fixed=True)]:
+            bad_fixed += 1
+        if v_swift != [swift_designed(p, w, fixed=False)]:
+            bad_old += 1
+    return bad_fixed, bad_old, bad_open, first_w
+
+
+def timer_value_range(p, hours=8):
+    """화면에 가는 타이머 값 = (지금 - 타이머 시작) = w - o + 60초 (FrameSchedule.leadSeconds).
+    활동이 열린 뒤에는 w >= 0 이므로 가장 작은 값은 w=0 이고 o 가 가장 클 때다. 음수가 되는지 본다."""
+    fps = p["gridFPS"]
+    offsets = [Fraction(c["offsetCells"], fps) for cells in p["frames"] for cell in cells for c in cell["conditions"]]
+    lead = 60
+    return lead - max(offsets), hours * 3600 + lead - min(offsets)
+
+
 def text_count(p):
     return sum(len(cell["conditions"]) for cells in p["frames"] for cell in cells)
 
@@ -155,6 +212,17 @@ def main():
                 cs = " ∧ ".join(f"{'짝' if c['parity'] == 'even' else '홀'}@{c['offsetCells']}" for c in cell["conditions"])
                 parts.append(f"[{cell['startCell']},{cell['endCell']}) {cs}")
             print(f"  프레임 {i + 1}: " + "; ".join(parts))
+    print()
+    print("Swift 정수 규칙 대조 (Swift 의 Int / 와 % 는 0 쪽으로 버림. 단위 테스트와 같은 점: -2초부터 6초까지 칸의 1/10 간격)")
+    print("단계 | 고친 designedFrame 불일치 | 1회차 designedFrame 불일치 | Swift isOpen vs 파이썬 | 가장 작은 w | 화면에 가는 타이머 값(초) 최소~최대(8시간)")
+    for p in plans:
+        bad_fixed, bad_old, bad_open, first_w = verify_swift(p)
+        lo, hi = timer_value_range(p)
+        good = bad_fixed == 0 and bad_open == 0 and lo > 0
+        ok &= good
+        print(f"{p['ko']} | {bad_fixed} | {bad_old} | {bad_open} | {float(first_w):.5f} | "
+              f"{fmt(lo)} ~ {fmt(hi)}  -> {'통과' if good else '실패'}")
+    print("  1회차 맥 단위 테스트 실패 수(쉼 140, 보통 80)가 '1회차' 열과 같으면 원인이 맞다.")
     fr = font_requirements(plans)
     print()
     print(f"폰트 요구: 쓰는 짝홀 {fr['parities_used']} -> 파일 2개 {list(fr['fonts'].values())}")

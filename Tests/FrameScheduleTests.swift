@@ -58,6 +58,16 @@ final class FrameScheduleTests: XCTestCase {
         XCTAssertLessThan(FrameSchedule.timerStart(anchor: anchor, condition: c, gridFPS: 8), anchor)
     }
 
+    /// 1회차 실패 원인(정수 나눗셈 방향) 재발 방지
+    func testFloorDivAndNegativeDesignedFrame() {
+        XCTAssertEqual(FrameSchedule.floorDiv(-15, 8), -2)
+        XCTAssertEqual(FrameSchedule.floorDiv(-16, 8), -2)
+        XCTAssertEqual(FrameSchedule.floorDiv(15, 8), 1)
+        let rest = FrameSchedule.plan(tier: 0)
+        // w = -1.86875 → 칸 -15 → 장 -2 → 프레임 0 (1회차에는 1 이 나왔다)
+        XCTAssertEqual(FrameSchedule.designedFrame(rest, elapsed: -1.86875), 0)
+    }
+
     func testTierIsClamped() {
         XCTAssertEqual(FrameSchedule.plan(tier: -5).tier, 0)
         XCTAssertEqual(FrameSchedule.plan(tier: 99).tier, 3)

@@ -3,7 +3,7 @@
 다이내믹 아일랜드 축소 칸(36pt)에서 캐릭터가 계속 달리는 것처럼 보이게 할 수 있는지, 속도 단계를 바꿀 수 있는지 시뮬레이터로 확인하는 시험용 저장소다. 결정 문서: `~/island-runner/docs/team/2026-11-27-la-animation-spike/3-decision.md` (방식 ② 타이머 글자 + 깜빡임 마스크 폰트).
 
 - 이 서버(리눅스)에는 Swift·Xcode·XcodeGen 이 없다. Swift 코드는 아직 한 번도 컴파일하지 않았고, 첫 맥 실행(R2)이 첫 컴파일이다.
-- 원격 저장소는 아직 없다(사용자 결정 U1: 나중에). push 하지 않았다.
+- 원격 저장소: `git@github.com:mrbyun-bot/island-runner-spike.git` (main 에 코드, `results` 브랜치에 맥 실행 결과).
 - 그림·글꼴은 모두 팀이 직접 만들었다. `widget-anim-lab`, `WidgetAnimation`(둘 다 MIT)은 원리 설명만 참고했고 코드는 보지 않고 새로 썼다.
 
 ## 원리 한 단락
@@ -103,7 +103,7 @@ python3 tools/fontgen.py --check   # 만들지 않고 검사만
 클라우드 맥(저장소가 생긴 뒤, R1):
 
 1. GitHub 저장소 Actions 탭 → `spike` → Run workflow.
-2. 입력: `stage`(all/p0/p1/p2/p3), `include_max`(12fps, 빠름 합격 뒤에만), `screenshots`, `runner`(macos-26/macos-15), `xcode`(비우면 가장 새 것).
+2. 입력: `stage`(probe/all/p0/p1/p2/p3, 기본 probe), `include_max`(12fps, 빠름 합격 뒤에만), `screenshots`, `runner`(macos-26/macos-15), `xcode`(비우면 가장 새 것).
 3. 결과는 artifact `spike-<실행번호>-<재시도>` 와 `results` 브랜치 `runs/<실행번호>-<재시도>/` 두 곳. 실행 횟수는 `results` 브랜치 `RUNS.md` 에 "n/12" 로 쌓인다(상한 12회, U3).
 4. 서버에서 받기: `git fetch origin results && git worktree add ../spike-results origin/results`
 
@@ -148,6 +148,37 @@ xcrun simctl launch booted com.islandrunner.spike.app -calibrate 8   # G2 교정
 11. 잠금 화면 자동화: `notifyutil -p com.apple.springboard.lockcomplete` 는 근거 없는 시도다. 확장 화면(길게 누르기)과 최소 화면은 자동화하지 않았다. J7 은 "확인 못 함"이 될 가능성이 높다.
 12. `simctl status_bar override` 로 시계를 고정해도 G1 대조 영역에 다른 변화가 끼는지.
 13. 러너 이미지 이름 `macos-26` 과 그 안의 Xcode·시뮬레이터 이름(`iPhone 17 Pro` 등). 없으면 `pick_device.py` 가 다이내믹 아일랜드 기종 중 아무거나 고르고, 그것도 없으면 실패한다.
+
+## 2회차(probe) 준비 (2026-11-27)
+
+1회차 결과(`results` 브랜치 `runs/1-1/`): 빌드·설치·`Activity.request` 는 됐고, 오른쪽 고정 글자와 **정지 그림(`j8_still_compact.png`)은 축소 칸에 보였다.** 타이머 글자를 쓰는 p0·sprite 만 빈칸이었다. 단위 테스트 실패는 테스트의 기준값 함수(`designedFrame`)가 음수 칸에서 Swift 정수 나눗셈(0 쪽 버림)을 쓴 탓이라 고쳤다(`python3 tools/schedule.py` 의 "Swift 정수 규칙 대조" 표가 1회차 실패 수 140·80 을 그대로 재현하고, 고친 식은 0).
+
+`stage=probe` 는 아래를 케이스마다 8~10초씩 찍는다. 케이스마다 앱 화면(`<케이스>_app.png`), 축소 칸(`<케이스>_compact.png`), 영상(`video/<케이스>.mp4`)이 남는다.
+
+| 케이스 | 방식 | 보이면 | 안 보이면 |
+|---|---|---|---|
+| q_still | 정지 그림 | 대조군(1회차에 보임) | 시뮬레이터·촬영 자체 문제 |
+| q_probe0 | 주황 사각형 | 칸이 그려짐. 사각형이 잘린 높이 = 쓸 수 있는 높이 | — |
+| q_probe1 | 주황 + 흰 글자 | 일반 글자 됨 | — |
+| q_probe2 | 주황 + 시스템 폰트 타이머 | 타이머 글자 자체는 됨 | 축소 칸에서 타이머 글자가 안 그려짐 → 방식 ② 불가, 후퇴선 |
+| q_probe3 | 회색 + 마스크 폰트 타이머(작게, 통째로) | 흰 네모 줄 = 렌더러에서 폰트가 먹음, 줄 위치 = 정렬 | 숫자 모양이 보이면 폰트가 렌더러에 없음(시스템 폰트로 대신 그림) |
+| q_p0 | 1회차 배치(`.fixedSize`) | — | 1회차와 같음 |
+| q_p0w | 넓은 고정 틀 + 오른쪽 정렬 | 1초 켜짐·1초 꺼짐이면 `.fixedSize` 가 원인 | probe2·3 결과와 같이 본다 |
+| q_sprite / q_spritew | 도형 보통, 두 배치 | spritew 만 돌면 배치 문제 확정 | — |
+| q_spritew_h | 햄스터 빠름, 넓은 틀 | 사용자에게 보여 줄 영상 | — |
+
+로그: 확장은 `RunnerLiveActivity/WidgetLog.swift` 로 파일·`Logger.notice`·`NSLog`(앞머리 `IRSPIKE`) 세 곳에 남긴다. 워크플로가 `widget-log.txt`(확장 데이터 폴더에서 찾아 꺼냄), `oslog-stream.txt`(촬영 중 실시간), `oslog-spike.txt`(`--info --debug`), `oslog-renderer.txt`(`WidgetRenderer_Activities`·확장 프로세스)를 모은다.
+
+### 2회차 맥에서 확인할 것 (이 서버에서 컴파일하지 못함)
+
+1. `RunnerSprite.body` 안 `switch mode { case "probe0": ... default: if ... }` 가 ViewBuilder 로 컴파일되는지(Swift 5.3 이후 지원으로 알고 있음).
+2. `TimerMaskText.body` 의 `switch layout` 두 갈래가 서로 다른 뷰 타입이어도 되는지(ViewBuilder 가 묶어 줄 것으로 봄).
+3. `WidgetLog.startupCheck` 를 `static let ...: Void = { ... }()` 로 한 번만 돌리고 `_ = WidgetLog.startupCheck` 로 부르는 방식.
+4. `NSLog("IRSPIKE %@ %@", event, detail)` 에 Swift `String` 을 바로 넘기는 것(CVarArg 로 연결된다고 알고 있음).
+5. 위젯 확장의 `FileManager ... .documentDirectory` 가 쓰기 가능한 확장 전용 폴더인지. 1회차 설치 로그에 `Data container for com.islandrunner.spike.app.liveactivity` 가 있어 폴더는 있다. `simctl get_app_container ... com.islandrunner.spike.app.liveactivity data` 가 확장 번들 ID 를 받는지는 확인 못 함(그래서 `find` 로도 찾는다, `widget-log-where.txt`).
+6. `log stream --predicate 'subsystem == "..." OR eventMessage BEGINSWITH "IRSPIKE"'` 와 `log show --info --debug` 가 `simctl spawn` 안에서 그대로 되는지.
+7. `.font(.custom(_, fixedSize: 6))` 처럼 아주 작은 크기가 축소 칸에서 그대로 그려지는지(probe3).
+8. 넓은 틀(`.frame(width: 36 * 8)`)을 바깥 36pt 틀에 오른쪽 정렬하면 SwiftUI 가 왼쪽으로 넘치게 두고 `.clipped()` 가 잘라 내는지. 앱 화면 캡처(`q_p0w_app.png`)로 앱 안에서 먼저 본다.
 
 ## 하지 않은 것
 

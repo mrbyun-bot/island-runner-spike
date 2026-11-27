@@ -2,7 +2,9 @@
 # 시뮬레이터 촬영 순서 (맥 러너에서 실행). 한 실행에 케이스를 몰아서 찍는다.
 #
 # 사용: tools/ci/run_cases.sh <UDID> <OUT_DIR> <STAGE> <INCLUDE_MAX> <SCREENSHOTS>
-#   STAGE: all | p0 | p1 | p2 | p3      (G1·G2 는 항상 먼저 찍는다)
+#   STAGE: probe | all | p0 | p1 | p2 | p3   (G1·G2 는 항상 먼저 찍는다)
+#     probe = 2회차 원인 가르기 묶음(정지 대조 → probe0~3 → p0/p0w → sprite/spritew), 케이스마다 8~10초.
+#             G1·G2 도 짧게(5초, 8초) 찍고 J5·J6·J7·P3 쉼은 찍지 않는다(마스크가 안 보이면 판정할 게 없음).
 #   INCLUDE_MAX: true 면 12fps 최고 단계(P2b)도 찍는다 (사용자 결정 U2: 빠름 합격 뒤)
 #   SCREENSHOTS: true 면 녹화와 같이 0.3~0.7초 무작위 간격 연속 스크린샷
 #
@@ -28,6 +30,15 @@ echo "case,tier,art,seconds,note" > "$OUT/cases.csv"
 echo "case,index,host_before,host_after,file" > "$OUT/shots.csv"
 
 now() { python3 -c 'import time; print(f"{time.time():.3f}")'; }
+
+# 촬영 내내 우리 로그를 실시간으로 받는다(확장 프로세스는 짧게 떴다 사라져 log show 로는 놓칠 수 있다).
+# WidgetLog 는 Logger.notice 와 앞머리 IRSPIKE 의 NSLog 를 같이 남긴다.
+xcrun simctl spawn "$UDID" log stream --level debug --style compact \
+  --predicate 'subsystem == "com.islandrunner.spike" OR eventMessage BEGINSWITH "IRSPIKE"' \
+  > "$OUT/oslog-stream.txt" 2>&1 &
+STREAM_PID=$!
+stop_stream() { kill -INT "$STREAM_PID" 2>/dev/null; sleep 1; kill -TERM "$STREAM_PID" 2>/dev/null; true; }
+trap stop_stream EXIT
 mark() { echo "$(now),$1,${2:-}" >> "$OUT/timeline.csv"; }
 want() { [ "$STAGE" = "all" ] || [ "$STAGE" = "$1" ]; }
 
@@ -107,13 +118,43 @@ settle() { sleep "${1:-2}"; }
 xcrun simctl terminate "$UDID" "$BUNDLE" > /dev/null 2>&1
 to_background "g1"
 settle 3
-record g1_control 10 - - "앱 없음, 같은 영역 변화 0 이어야 함"
+if [ "$STAGE" = "probe" ]; then G1_SECS=5; G2_SECS=8; else G1_SECS=10; G2_SECS=10; fi
+record g1_control "$G1_SECS" - - "앱 없음, 같은 영역 변화 0 이어야 함"
 
 # ---- G2 교정: 앱 안 8Hz 두 색 교대 ----
 launch_app -calibrate 8
 settle 3
-record g2_calibrate_8hz 10 - - "화면 전체 8Hz 교대, 측정 8±0.8"
+record g2_calibrate_8hz "$G2_SECS" - - "화면 전체 8Hz 교대, 측정 8±0.8"
 xcrun simctl terminate "$UDID" "$BUNDLE" > /dev/null 2>&1
+
+# ---- probe: 2회차 원인 가르기 (Shared/SpriteView.swift 머리말의 모드 표) ----
+# 케이스마다: 앱 실행(-reset 으로 새 활동) → 앱 화면 캡처(<케이스>_app.png, 같은 뷰가 앱 안에서 그려지는지)
+#            → 설정 앱으로 보내 아일랜드 축소 칸 캡처(<케이스>_compact.png) → 녹화
+# cases.csv 의 tier 칸에는 판정 단계 대신 방식 이름을 적는다(sprite 계열만 단계 숫자).
+probe_case() {
+  # probe_case <케이스> <방식> <그림> <단계> <초> <cases.csv tier 칸> <메모>
+  local name="$1" mode="$2" art="$3" tier="$4" secs="$5" col="$6" note="$7"
+  launch_app -autostart -reset -mode "$mode" -art "$art" -speedTier "$tier"
+  settle 3
+  still_shot "${name}_app"
+  to_background "$name"
+  settle 2
+  still_shot "${name}_compact"
+  record "$name" "$secs" "$col" "$art" "$note"
+}
+
+if [ "$STAGE" = "probe" ]; then
+  probe_case q_still     still   hamster 1 6  still   "대조군: 1회차에 보인 정지 그림, 보여야 함"
+  probe_case q_probe0    probe0  shape   1 8  probe0  "주황 사각형: 칸이 그려지는지, 보이는 높이"
+  probe_case q_probe1    probe1  shape   1 8  probe1  "주황 + 흰 글자 가1: 일반 글자"
+  probe_case q_probe2    probe2  shape   1 10 probe2  "주황 + 시스템 폰트 타이머: 1초마다 숫자가 바뀌어야 함"
+  probe_case q_probe3    probe3  shape   1 10 probe3  "회색 + 마스크 폰트 타이머 작게 통째로: 흰 네모 줄, 폰트·정렬 확인"
+  probe_case q_p0        p0      shape   1 10 p0      "1회차 배치(fixedSize): 1회차는 빈칸"
+  probe_case q_p0w       p0w     shape   1 10 p0w     "애플 문서 배치(넓은 틀): 흰 칸 1초 켜짐 1초 꺼짐"
+  probe_case q_sprite    sprite  shape   1 10 1       "1회차 배치 도형 보통"
+  probe_case q_spritew   spritew shape   1 10 1       "넓은 틀 배치 도형 보통, 한 바퀴 1.0초"
+  probe_case q_spritew_h spritew hamster 2 10 2       "넓은 틀 배치 햄스터 빠름(보여 줄 영상)"
+fi
 
 # ---- P0: 타이머 글자 1개 + 마스크 폰트 (흰 칸이 1초마다 켜졌다 꺼짐) ----
 if want p0; then

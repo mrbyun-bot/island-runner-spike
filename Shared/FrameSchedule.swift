@@ -133,9 +133,19 @@ public enum FrameSchedule {
     }
 
     /// 설계상 w 순간에 보여야 할 프레임 (결정 문서 정의: floor(w / 장당 유지) mod 프레임 수)
+    /// 음수 w 에서도 맞도록 바닥 나눗셈을 쓴다. Swift 의 Int `/` 는 0 쪽으로 버려서
+    /// (-15 / 8 = -1) 1회차 테스트가 w < 0 구간에서 실패했다(쉼 140건, 보통 80건).
+    /// 마스크 창 계산(isOpen, plan)은 floor 를 이미 써서 틀린 곳이 없었다.
     public static func designedFrame(_ plan: TierPlan, elapsed w: Double) -> Int {
         let cell = Int(floor(w * Double(plan.gridFPS)))
-        return ((cell / plan.holdCells) % plan.frameCount + plan.frameCount) % plan.frameCount
+        let hold = floorDiv(cell, plan.holdCells)
+        return ((hold % plan.frameCount) + plan.frameCount) % plan.frameCount
+    }
+
+    /// 바닥 나눗셈 (b > 0). floorDiv(-15, 8) = -2
+    public static func floorDiv(_ a: Int, _ b: Int) -> Int {
+        let q = a / b
+        return (a % b != 0 && a < 0) ? q - 1 : q
     }
 
     /// 타이머의 시작 시각. 짝수 초(60)를 앞당겨 anchor 직후에도 이미 세고 있게 한다.
@@ -143,5 +153,11 @@ public enum FrameSchedule {
 
     public static func timerStart(anchor: Date, condition c: TimerCondition, gridFPS: Int) -> Date {
         anchor.addingTimeInterval(Double(c.offsetCells) / Double(gridFPS) - leadSeconds)
+    }
+
+    /// 시험 모드(probe2·probe3) 타이머 범위. p0 의 타이머(offset 0)와 같은 값이 보이게 한다.
+    public static func probeRange(anchor: Date) -> ClosedRange<Date> {
+        let start = anchor.addingTimeInterval(-leadSeconds)
+        return start...start.addingTimeInterval(12 * 60 * 60)
     }
 }

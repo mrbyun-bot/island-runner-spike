@@ -19,7 +19,7 @@ enum SpikeLog {
     static func write(_ event: String, _ detail: String = "") {
         let now = Date().timeIntervalSince1970
         let line = String(format: "%.3f", now) + "\t" + event + "\t" + detail + "\n"
-        logger.info("\(event, privacy: .public) \(detail, privacy: .public) t=\(now)")
+        logger.notice("\(event, privacy: .public) \(detail, privacy: .public) t=\(now)")
         queue.async {
             let url = fileURL
             if let data = line.data(using: .utf8) {
