@@ -33,9 +33,9 @@ tools/analyze.py                (QC 담당, 아직 없음) 영상 판정
 
 | 할 일 | 내용 | 파일:줄 |
 |---|---|---|
-| L1 | 타깃 3개 | `project.yml:21`(targets), `:22` 앱 `SpikeApp`, `:66` 확장 `RunnerLiveActivity`, `:98` 테스트 `SpikeTests` |
-| L1 | `NSSupportsLiveActivities` | `project.yml:45` |
-| L1 | 확장 `UIAppFonts` 폰트 등록 (앱에도 같은 등록) | `project.yml:90`(확장), `:52`(앱) |
+| L1 | 타깃 3개 | `project.yml:21`(targets), `:22` 앱 `SpikeApp`, `:65` 확장 `RunnerLiveActivity`, `:98` 테스트 `SpikeTests` |
+| L1 | `NSSupportsLiveActivities` | `project.yml:44` |
+| L1 | 확장 `UIAppFonts` 폰트 등록 (앱에도 같은 등록) | `project.yml:90`(확장), `:51`(앱) |
 | L1 | 위젯 확장 지정 | `project.yml:88` `com.apple.widgetkit-extension` |
 | L1 | 시뮬레이터 임시 서명 | `project.yml:16-18` (`CODE_SIGN_IDENTITY: "-"`) |
 | L1 | 스킴(빌드·테스트) | `project.yml:109` |
