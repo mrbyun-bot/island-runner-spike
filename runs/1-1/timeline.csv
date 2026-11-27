@@ -1,0 +1,74 @@
+host_time,event,case
+1795746994.681,to_background,g1
+1795747076.224,record_start,g1_control
+1795747086.561,record_stop_call,g1_control
+1795747103.525,record_stopped,g1_control
+1795747103.609,launch_app,-calibrate 8
+1795747117.258,record_start,g2_calibrate_8hz
+1795747127.484,record_stop_call,g2_calibrate_8hz
+1795747127.886,record_stopped,g2_calibrate_8hz
+1795747129.729,launch_app,-autostart -reset -mode p0 -speedTier 1
+1795747140.830,to_background,p0
+1795747155.868,screenshot,p0_compact
+1795747159.474,record_start,p0_timer_font
+1795747169.745,record_stop_call,p0_timer_font
+1795747170.182,record_stopped,p0_timer_font
+1795747170.275,launch_app,-autostart -reset -art shape -speedTier 1
+1795747179.700,to_background,p1
+1795747186.058,record_start,p1_shape_normal
+1795747206.534,record_stop_call,p1_shape_normal
+1795747207.456,record_stopped,p1_shape_normal
+1795747207.504,launch_app,-autostart -reset -art shape -speedTier 0
+1795747213.819,to_background,p2_rest
+1795747218.659,record_start,p2_shape_rest
+1795747238.948,record_stop_call,p2_shape_rest
+1795747239.369,record_stopped,p2_shape_rest
+1795747239.474,launch_app,-autostart -art shape -speedTier 1
+1795747247.499,to_background,p2_normal
+1795747253.325,record_start,p2_shape_normal
+1795747278.456,record_stop_call,p2_shape_normal
+1795747279.161,record_stopped,p2_shape_normal
+1795747279.188,launch_app,-autostart -art shape -speedTier 2
+1795747287.306,to_background,p2_fast
+1795747294.785,record_start,p2_shape_fast
+1795747316.149,record_stop_call,p2_shape_fast
+1795747324.060,record_stopped,p2_shape_fast
+1795747325.052,launch_app,-autostart -art shape -speedTier 1
+1795747334.390,to_background,p2_j6
+1795747339.177,record_start,p2_j6_switch
+1795747346.264,tier_change_call,p2_j6_switch tier=2
+1795747349.216,to_background,p2_j6_after
+1795747369.540,record_stop_call,p2_j6_switch
+1795747369.963,record_stopped,p2_j6_switch
+1795747370.934,record_start,p2_fast_bg60
+1795747431.163,record_stop_call,p2_fast_bg60
+1795747434.048,record_stopped,p2_fast_bg60
+1795747434.279,launch_app,-autostart -reset -art hamster -speedTier 0
+1795747440.712,to_background,p3_rest
+1795747445.300,record_start,p3_hamster_rest
+1795747455.551,record_stop_call,p3_hamster_rest
+1795747455.971,record_stopped,p3_hamster_rest
+1795747456.051,launch_app,-autostart -art hamster -speedTier 1
+1795747462.894,to_background,p3_normal
+1795747469.680,record_start,p3_hamster_normal
+1795747479.779,record_stop_call,p3_hamster_normal
+1795747480.309,record_stopped,p3_hamster_normal
+1795747480.410,launch_app,-autostart -art hamster -speedTier 2
+1795747486.539,to_background,p3_fast
+1795747495.890,record_start,p3_hamster_fast
+1795747516.174,record_stop_call,p3_hamster_fast
+1795747517.400,record_stopped,p3_hamster_fast
+1795747517.925,launch_app,-autostart -reset -art hamster -mode still -speedTier 2
+1795747525.041,to_background,p3_still
+1795747528.903,screenshot,j8_still_compact
+1795747531.730,record_start,j8_still
+1795747536.827,record_stop_call,j8_still
+1795747537.585,record_stopped,j8_still
+1795747537.807,launch_app,-autostart -reset -art hamster -speedTier 2
+1795747545.134,to_background,j7
+1795747552.072,lock_attempt,j7
+1795747556.623,screenshot,j7_lock_attempt
+1795747558.951,record_start,j7_lock_attempt
+1795747569.209,record_stop_call,j7_lock_attempt
+1795747570.298,record_stopped,j7_lock_attempt
+1795747570.403,cases_done,all

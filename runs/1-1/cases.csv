@@ -1,0 +1,15 @@
+case,tier,art,seconds,note
+g1_control,-,-,10,앱 없음, 같은 영역 변화 0 이어야 함
+g2_calibrate_8hz,-,-,10,화면 전체 8Hz 교대, 측정 8±0.8
+p0_timer_font,p0,-,10,J4 폭, 폰트 로드
+p1_shape_normal,1,shape,20,포즈 4종 순서, 변화율 3/초 이상
+p2_shape_rest,0,shape,20,한 바퀴 2.0초
+p2_shape_normal,1,shape,25,한 바퀴 1.0초
+p2_shape_fast,2,shape,20,J1 판정 단계, 한 바퀴 0.5초
+p2_j6_switch,1->2,shape,30,8초 뒤 단계 바꾸기 호출, 앱 로그 update_call 시각과 비교
+p2_fast_bg60,2,shape,60,J5 백그라운드 60초 멈춤 없음
+p3_hamster_rest,0,hamster,10,사용자 보기용 쉼
+p3_hamster_normal,1,hamster,10,사용자 보기용 보통
+p3_hamster_fast,2,hamster,20,사용자 보기용 빠름 20초, P2 숫자 유지 확인
+j8_still,still,hamster,5,정지 포즈 한 장, 변화 0 이어야 함
+j7_lock_attempt,2,hamster,10,잠금 화면이 보이면 J7 잠금 판정, 아니면 확인 못 함

@@ -1,0 +1,480 @@
+Command line invocation:
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/xcodebuild -project IslandRunnerSpike.xcodeproj -scheme SpikeApp -destination "platform=iOS Simulator,id=6478AFFB-AE17-412A-A1E5-51BCFFD300B6" -derivedDataPath /Users/runner/work/island-runner-spike/island-runner-spike/DerivedData -resultBundlePath /Users/runner/work/island-runner-spike/island-runner-spike/out/tests.xcresult test-without-building
+
+Writing result bundle at path:
+	/Users/runner/work/island-runner-spike/island-runner-spike/out/tests.xcresult
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, arch:arm64, id:6478AFFB-AE17-412A-A1E5-51BCFFD300B6, OS:26.5, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:6478AFFB-AE17-412A-A1E5-51BCFFD300B6, OS:26.5, name:iPhone 17 Pro }
+Test Suite 'All tests' started at 2026-11-27 02:29:09.269.
+Test Suite 'SpikeTests.xctest' started at 2026-11-27 02:29:09.273.
+Test Suite 'FrameScheduleTests' started at 2026-11-27 02:29:09.274.
+Test Case '-[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign]' started.
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.86875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.85625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.84375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.83125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.81875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.80625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.79375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.78125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.76875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.75625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.74375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.73125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.71875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.70625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.69375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.68125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.66875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.65625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.64375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.63125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.61875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.60625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.59375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.58125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.56875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.55625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.54375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.53125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.51875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.50625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.49375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.48125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.46875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.45625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.44375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.43125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.41875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.40625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.39375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.38125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.36875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.35625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.34375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.33125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.31875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.30625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.29375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.28125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.26875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.25625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.24375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.23125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.21875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.20625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.19375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.18125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.16875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.15625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.14375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.13125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.11875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.10625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.09375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.08125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.06875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.05625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.04375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.03125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.01875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 0 w=-1.00625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.86875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.85625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.84375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.83125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.81875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.80625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.79375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.78125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.76875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.75625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.74375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.73125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.71875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.70625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.69375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.68125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.66875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.65625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.64375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.63125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.61875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.60625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.59375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.58125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.56875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.55625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.54375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.53125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.51875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.50625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.49375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.48125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.46875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.45625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.44375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.43125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.41875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.40625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.39375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.38125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.36875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.35625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.34375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.33125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.31875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.30625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.29375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.28125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.26875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.25625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.24375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.23125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.21875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.20625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.19375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.18125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.16875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.15625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.14375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.13125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.11875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.10625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.09375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.08125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.06875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.05625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.04375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.03125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.01875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[0]") - 단계 0 w=-0.00625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.86875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.85625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.84375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.83125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.81875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.80625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.79375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.78125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.76875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-1.75625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.61875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.60625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.59375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.58125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.56875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.55625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.54375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.53125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.51875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-1.50625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.36875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.35625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.34375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.33125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.31875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.30625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.29375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.28125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.26875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-1.25625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.11875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.10625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.09375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.08125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.06875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.05625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.04375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.03125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.01875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-1.00625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.86875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.85625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.84375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.83125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.81875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.80625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.79375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.78125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.76875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[0]") is not equal to ("[1]") - 단계 1 w=-0.75625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.61875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.60625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.59375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.58125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.56875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.55625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.54375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.53125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.51875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[1]") is not equal to ("[2]") - 단계 1 w=-0.50625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.36875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.35625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.34375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.33125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.31875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.30625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.29375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.28125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.26875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[2]") is not equal to ("[3]") - 단계 1 w=-0.25625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.11875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.10625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.09375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.08125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.06875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.05625
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.04375
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.03125
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.01875
+/Users/runner/work/island-runner-spike/island-runner-spike/Tests/FrameScheduleTests.swift:34: error: -[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign] : XCTAssertEqual failed: ("[3]") is not equal to ("[0]") - 단계 1 w=-0.00625
+Test Case '-[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign]' failed (2.140 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testLoopAndHoldMatchDecisionTable]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testLoopAndHoldMatchDecisionTable]' passed (0.005 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testOffsetsAreInsideOneSecond]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testOffsetsAreInsideOneSecond]' passed (0.001 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testTierIsClamped]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testTierIsClamped]' passed (0.001 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testTimerStartIsBeforeAnchor]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testTimerStartIsBeforeAnchor]' passed (0.001 seconds).
+Test Suite 'FrameScheduleTests' failed at 2026-11-27 02:29:11.424.
+	 Executed 5 tests, with 220 failures (0 unexpected) in 2.148 (2.151) seconds
+Test Suite 'SpikeTests.xctest' failed at 2026-11-27 02:29:11.425.
+	 Executed 5 tests, with 220 failures (0 unexpected) in 2.148 (2.151) seconds
+Test Suite 'All tests' failed at 2026-11-27 02:29:11.425.
+	 Executed 5 tests, with 220 failures (0 unexpected) in 2.148 (2.156) seconds
+2026-11-27 02:33:10.185 xcodebuild[2157:10309] [MT] IDETestOperationsObserverDebug: 314.378 elapsed -- Testing started completed.
+2026-11-27 02:33:10.186 xcodebuild[2157:10309] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-27 02:33:10.186 xcodebuild[2157:10309] [MT] IDETestOperationsObserverDebug: 314.378 sec, +314.378 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/island-runner-spike/island-runner-spike/out/tests.xcresult
+
+Failing tests:
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+	FrameScheduleTests.testExactlyOneFrameVisibleAndMatchesDesign()
+
+** TEST EXECUTE FAILED **
+
+Testing started

@@ -1,0 +1,123 @@
+1795747111.530	launch	-calibrate 8
+1795747111.556	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747111.557	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747111.563	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747111.565	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747111.569	font_loaded	IRMaskEven app=true
+1795747111.569	font_loaded	IRMaskOdd app=true
+1795747111.569	calibrate_start	hz=8.0
+1795747132.470	launch	-autostart -reset -mode p0 -speedTier 1
+1795747132.472	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747132.472	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747132.473	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747132.473	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747132.473	font_loaded	IRMaskEven app=true
+1795747132.473	font_loaded	IRMaskOdd app=true
+1795747132.534	enabled	areActivitiesEnabled=true
+1795747132.576	request_call	tier=1 art=shape mode=p0 anchor=1795747132.575928 timers=16
+1795747132.945	request_ok	id=70783B2C-F26F-441C-A0BF-D72B1F7F20C8
+1795747172.621	launch	-autostart -reset -art shape -speedTier 1
+1795747172.626	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747172.627	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747172.628	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747172.629	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747172.629	font_loaded	IRMaskEven app=true
+1795747172.630	font_loaded	IRMaskOdd app=true
+1795747172.646	enabled	areActivitiesEnabled=true
+1795747172.683	end_call	id=70783B2C-F26F-441C-A0BF-D72B1F7F20C8
+1795747173.408	request_call	tier=1 art=shape mode=sprite anchor=1795747173.407792 timers=16
+1795747173.444	request_ok	id=51049868-0885-4D24-BA52-3D367E7B1382
+1795747209.257	launch	-autostart -reset -art shape -speedTier 0
+1795747209.261	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747209.261	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747209.262	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747209.263	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747209.263	font_loaded	IRMaskEven app=true
+1795747209.263	font_loaded	IRMaskOdd app=true
+1795747209.278	enabled	areActivitiesEnabled=true
+1795747209.294	end_call	id=51049868-0885-4D24-BA52-3D367E7B1382
+1795747209.798	request_call	tier=0 art=shape mode=sprite anchor=1795747209.797682 timers=2
+1795747209.849	request_ok	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370
+1795747242.692	launch	-autostart -art shape -speedTier 1
+1795747242.696	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747242.696	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747242.697	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747242.697	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747242.697	font_loaded	IRMaskEven app=true
+1795747242.697	font_loaded	IRMaskOdd app=true
+1795747242.709	enabled	areActivitiesEnabled=true
+1795747242.729	update_call	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370 tier=1 anchor=1795747209.797682 timers=16
+1795747242.996	update_done	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370 tier=1
+1795747281.460	launch	-autostart -art shape -speedTier 2
+1795747281.468	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747281.470	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747281.471	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747281.472	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747281.472	font_loaded	IRMaskEven app=true
+1795747281.472	font_loaded	IRMaskOdd app=true
+1795747281.482	enabled	areActivitiesEnabled=true
+1795747281.511	update_call	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370 tier=2 anchor=1795747209.797682 timers=32
+1795747281.974	update_done	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370 tier=2
+1795747329.291	launch	-autostart -art shape -speedTier 1
+1795747329.299	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747329.299	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747329.300	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747329.300	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747329.300	font_loaded	IRMaskEven app=true
+1795747329.300	font_loaded	IRMaskOdd app=true
+1795747329.308	enabled	areActivitiesEnabled=true
+1795747329.331	update_call	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370 tier=1 anchor=1795747209.797682 timers=16
+1795747329.488	update_done	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370 tier=1
+1795747438.076	launch	-autostart -reset -art hamster -speedTier 0
+1795747438.078	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747438.079	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747438.079	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747438.080	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747438.080	font_loaded	IRMaskEven app=true
+1795747438.080	font_loaded	IRMaskOdd app=true
+1795747438.276	enabled	areActivitiesEnabled=true
+1795747438.306	end_call	id=FBAB695D-3CB3-4C30-99F7-0B8F6460B370
+1795747438.536	request_call	tier=0 art=hamster mode=sprite anchor=1795747438.5355701 timers=2
+1795747438.594	request_ok	id=AECA743B-5FC2-4A85-9983-70D4110EFCF6
+1795747458.105	launch	-autostart -art hamster -speedTier 1
+1795747458.111	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747458.112	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747458.114	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747458.115	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747458.116	font_loaded	IRMaskEven app=true
+1795747458.116	font_loaded	IRMaskOdd app=true
+1795747458.129	enabled	areActivitiesEnabled=true
+1795747458.151	update_call	id=AECA743B-5FC2-4A85-9983-70D4110EFCF6 tier=1 anchor=1795747438.5355701 timers=16
+1795747458.326	update_done	id=AECA743B-5FC2-4A85-9983-70D4110EFCF6 tier=1
+1795747482.046	launch	-autostart -art hamster -speedTier 2
+1795747482.050	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747482.051	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747482.052	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747482.053	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747482.053	font_loaded	IRMaskEven app=true
+1795747482.053	font_loaded	IRMaskOdd app=true
+1795747482.065	enabled	areActivitiesEnabled=true
+1795747482.086	update_call	id=AECA743B-5FC2-4A85-9983-70D4110EFCF6 tier=2 anchor=1795747438.5355701 timers=32
+1795747482.319	update_done	id=AECA743B-5FC2-4A85-9983-70D4110EFCF6 tier=2
+1795747520.060	launch	-autostart -reset -art hamster -mode still -speedTier 2
+1795747520.065	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747520.067	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747520.068	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747520.070	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747520.072	font_loaded	IRMaskEven app=true
+1795747520.073	font_loaded	IRMaskOdd app=true
+1795747520.087	enabled	areActivitiesEnabled=true
+1795747520.114	end_call	id=AECA743B-5FC2-4A85-9983-70D4110EFCF6
+1795747520.469	request_call	tier=2 art=hamster mode=still anchor=1795747520.46858 timers=32
+1795747520.515	request_ok	id=75A740BF-A616-4883-838A-EBD52EF87E86
+1795747539.831	launch	-autostart -reset -art hamster -speedTier 2
+1795747539.835	font_file	app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747539.836	font_file	app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747539.838	font_file	appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"]
+1795747539.839	font_file	appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"]
+1795747539.839	font_loaded	IRMaskEven app=true
+1795747539.839	font_loaded	IRMaskOdd app=true
+1795747539.854	enabled	areActivitiesEnabled=true
+1795747539.886	end_call	id=75A740BF-A616-4883-838A-EBD52EF87E86
+1795747540.042	request_call	tier=2 art=hamster mode=sprite anchor=1795747540.042371 timers=32
+1795747540.096	request_ok	id=788E6139-96B3-4B73-BB25-849DC6991751
