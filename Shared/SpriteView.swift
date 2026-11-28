@@ -183,6 +183,9 @@ struct TimerMaskText: View {
                 .foregroundStyle(Color.white)
                 .multilineTextAlignment(.trailing)
                 .lineLimit(1)
+                // 숫자가 바뀔 때 시스템이 넣는 전환(섞임)이 깜빡임으로 보인다. 끈다.
+                .contentTransition(.identity)
+                .transaction { $0.animation = nil }
                 .frame(width: size * 8, height: size, alignment: .trailing)
                 .frame(width: size, height: size, alignment: .trailing)
                 .clipped()

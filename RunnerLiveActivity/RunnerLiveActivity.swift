@@ -30,11 +30,8 @@ struct RunnerLiveActivity: Widget {
             } compactLeading: {
                 sprite(context, place: "compactLeading")
             } compactTrailing: {
-                // 오른쪽 칸은 고정 글자. 타이머 글자를 여기 두면 아일랜드 폭이 늘어난다는 보고(A5)가 있다.
-                Text(tierShort(context.state.speedTier))
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(Color(red: 1.0, green: 0.62, blue: 0.04))
-                    .frame(width: 20)
+                // 시험용 단계 글자(쉼/보/빠/최)는 지웠다. 제품에서는 여기에 지표 값(예: 42%)을 넣는다.
+                EmptyView()
             } minimal: {
                 sprite(context, place: "minimal")
             }
