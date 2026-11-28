@@ -1,0 +1,13 @@
+case,tier,art,seconds,note
+g1_control,-,-,5,앱 없음, 같은 영역 변화 0 이어야 함
+g2_calibrate_8hz,-,-,8,화면 전체 8Hz 교대, 측정 8±0.8
+q_still,still,hamster,6,대조군: 1회차에 보인 정지 그림, 보여야 함
+q_probe0,probe0,shape,8,주황 사각형: 칸이 그려지는지, 보이는 높이
+q_probe1,probe1,shape,8,주황 + 흰 글자 가1: 일반 글자
+q_probe2,probe2,shape,10,주황 + 시스템 폰트 타이머: 1초마다 숫자가 바뀌어야 함
+q_probe3,probe3,shape,10,회색 + 마스크 폰트 타이머 작게 통째로: 흰 네모 줄, 폰트·정렬 확인
+q_p0,p0,shape,10,1회차 배치(fixedSize): 1회차는 빈칸
+q_p0w,p0w,shape,10,애플 문서 배치(넓은 틀): 흰 칸 1초 켜짐 1초 꺼짐
+q_sprite,1,shape,10,1회차 배치 도형 보통
+q_spritew,1,shape,10,넓은 틀 배치 도형 보통, 한 바퀴 1.0초
+q_spritew_h,2,hamster,10,넓은 틀 배치 햄스터 빠름(보여 줄 영상)

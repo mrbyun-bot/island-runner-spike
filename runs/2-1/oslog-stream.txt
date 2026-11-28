@@ -1,0 +1,243 @@
+getpwuid_r did not find a match for uid 501
+Filtering the log data using "subsystem == "com.islandrunner.spike" OR composedMessage BEGINSWITH "IRSPIKE""
+Timestamp               Ty Process[PID:TID]
+2026-11-28 06:01:17.299 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] launch -calibrate 8 t=1795845677.298060
+2026-11-28 06:01:17.306 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845677.306528
+2026-11-28 06:01:17.306 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845677.306921
+2026-11-28 06:01:17.307 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845677.307833
+2026-11-28 06:01:17.308 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845677.308496
+2026-11-28 06:01:17.309 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845677.309943
+2026-11-28 06:01:17.310 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845677.310250
+2026-11-28 06:01:17.310 Df SpikeApp[6501:6694] [com.islandrunner.spike:app] calibrate_start hz=8.0 t=1795845677.310443
+2026-11-28 06:01:52.072 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] launch -autostart -reset -mode still -art hamster -speedTier 1 t=1795845712.072815
+2026-11-28 06:01:52.074 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845712.074410
+2026-11-28 06:01:52.074 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845712.074859
+2026-11-28 06:01:52.075 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845712.075204
+2026-11-28 06:01:52.075 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845712.075488
+2026-11-28 06:01:52.075 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845712.075725
+2026-11-28 06:01:52.075 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845712.075817
+2026-11-28 06:01:52.108 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845712.108233
+2026-11-28 06:01:52.126 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] request_call tier=1 art=hamster mode=still anchor=1795845712.126224 timers=16 t=1795845712.126285
+2026-11-28 06:01:52.367 Df SpikeApp[7709:7185] [com.islandrunner.spike:app] request_ok id=8212E0C9-7397-43B8-AC2C-3BDA36441171 t=1795845712.367740
+2026-11-28 06:01:56.235 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] ext_start IRMaskEven=true IRMaskOdd=true shape_1=true hamster_still=true bundle=RunnerLiveActivity.appex home=/Users/runner/Library/Developer/CoreSimulator/Devices/7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA/data t=1795845716.235400
+2026-11-28 06:01:56.235 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE ext_start IRMaskEven=true IRMaskOdd=true shape_1=true hamster_still=true bundle=RunnerLiveActivity.appex home=/Users/runner/Library/Developer/CoreSimulator/Devices/7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA/data
+2026-11-28 06:01:56.238 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224 t=1795845716.238539
+2026-11-28 06:01:56.238 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224
+2026-11-28 06:01:56.240 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224 t=1795845716.240441
+2026-11-28 06:01:56.240 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224
+2026-11-28 06:01:56.240 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224 t=1795845716.240809
+2026-11-28 06:01:56.240 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224
+2026-11-28 06:01:56.472 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224 t=1795845716.472366
+2026-11-28 06:01:56.472 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224
+2026-11-28 06:01:56.473 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224 t=1795845716.473063
+2026-11-28 06:01:56.473 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224
+2026-11-28 06:01:56.473 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224 t=1795845716.473317
+2026-11-28 06:01:56.473 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=hamster mode=still anchor=1795845712.126224
+2026-11-28 06:02:36.156 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] launch -autostart -reset -mode probe0 -art shape -speedTier 1 t=1795845756.156539
+2026-11-28 06:02:36.157 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845756.157896
+2026-11-28 06:02:36.158 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845756.158263
+2026-11-28 06:02:36.158 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845756.158946
+2026-11-28 06:02:36.159 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845756.159447
+2026-11-28 06:02:36.159 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845756.159759
+2026-11-28 06:02:36.159 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845756.159904
+2026-11-28 06:02:36.167 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845756.167536
+2026-11-28 06:02:36.184 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] end_call id=8212E0C9-7397-43B8-AC2C-3BDA36441171 t=1795845756.184278
+2026-11-28 06:02:36.837 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=probe0 anchor=1795845756.837061 timers=16 t=1795845756.837158
+2026-11-28 06:02:36.860 Df SpikeApp[9335:8122] [com.islandrunner.spike:app] request_ok id=52567709-1FB0-424D-9901-24856ED6DF3A t=1795845756.860212
+2026-11-28 06:02:39.081 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061 t=1795845759.081541
+2026-11-28 06:02:39.081 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061
+2026-11-28 06:02:39.083 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061 t=1795845759.083782
+2026-11-28 06:02:39.083 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061
+2026-11-28 06:02:39.084 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061 t=1795845759.084205
+2026-11-28 06:02:39.084 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061
+2026-11-28 06:02:40.295 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061 t=1795845760.295643
+2026-11-28 06:02:40.295 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061
+2026-11-28 06:02:40.296 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061 t=1795845760.296413
+2026-11-28 06:02:40.296 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061
+2026-11-28 06:02:40.296 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061 t=1795845760.296698
+2026-11-28 06:02:40.296 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe0 anchor=1795845756.837061
+2026-11-28 06:03:54.585 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] launch -autostart -reset -mode probe1 -art shape -speedTier 1 t=1795845834.585341
+2026-11-28 06:03:54.586 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845834.586469
+2026-11-28 06:03:54.586 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845834.586762
+2026-11-28 06:03:54.587 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845834.587439
+2026-11-28 06:03:54.588 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845834.588014
+2026-11-28 06:03:54.588 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845834.588586
+2026-11-28 06:03:54.588 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845834.588699
+2026-11-28 06:03:54.609 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845834.609560
+2026-11-28 06:03:54.629 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] end_call id=52567709-1FB0-424D-9901-24856ED6DF3A t=1795845834.629477
+2026-11-28 06:03:54.880 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=probe1 anchor=1795845834.8808432 timers=16 t=1795845834.880884
+2026-11-28 06:03:54.900 Df SpikeApp[11090:96b1] [com.islandrunner.spike:app] request_ok id=A652F1E0-DC8B-423E-9DC5-9A4A18DD330B t=1795845834.900868
+2026-11-28 06:03:54.991 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432 t=1795845834.991863
+2026-11-28 06:03:54.992 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432
+2026-11-28 06:03:54.995 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432 t=1795845834.995221
+2026-11-28 06:03:54.995 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432
+2026-11-28 06:03:54.995 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432 t=1795845834.995778
+2026-11-28 06:03:54.995 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432
+2026-11-28 06:03:55.529 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432 t=1795845835.529815
+2026-11-28 06:03:55.529 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432
+2026-11-28 06:03:55.533 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432 t=1795845835.533598
+2026-11-28 06:03:55.533 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432
+2026-11-28 06:03:55.534 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432 t=1795845835.534216
+2026-11-28 06:03:55.534 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe1 anchor=1795845834.8808432
+2026-11-28 06:04:19.734 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] launch -autostart -reset -mode probe2 -art shape -speedTier 1 t=1795845859.734786
+2026-11-28 06:04:19.741 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845859.741233
+2026-11-28 06:04:19.742 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845859.742501
+2026-11-28 06:04:19.742 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845859.742948
+2026-11-28 06:04:19.747 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845859.747015
+2026-11-28 06:04:19.748 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845859.748622
+2026-11-28 06:04:19.748 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845859.748846
+2026-11-28 06:04:19.766 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845859.766747
+2026-11-28 06:04:19.780 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] end_call id=A652F1E0-DC8B-423E-9DC5-9A4A18DD330B t=1795845859.780794
+2026-11-28 06:04:19.977 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=probe2 anchor=1795845859.977855 timers=16 t=1795845859.977942
+2026-11-28 06:04:19.996 Df SpikeApp[11919:9eea] [com.islandrunner.spike:app] request_ok id=BE97B213-2AF1-49B5-8F33-8D658D514FBA t=1795845859.996399
+2026-11-28 06:04:20.164 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855 t=1795845860.164570
+2026-11-28 06:04:20.164 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855
+2026-11-28 06:04:20.166 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855 t=1795845860.166073
+2026-11-28 06:04:20.166 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855
+2026-11-28 06:04:20.166 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855 t=1795845860.166479
+2026-11-28 06:04:20.167 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855
+2026-11-28 06:04:20.796 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855 t=1795845860.796479
+2026-11-28 06:04:20.796 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855
+2026-11-28 06:04:20.797 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855 t=1795845860.797059
+2026-11-28 06:04:20.797 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855
+2026-11-28 06:04:20.797 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855 t=1795845860.797295
+2026-11-28 06:04:20.797 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe2 anchor=1795845859.977855
+2026-11-28 06:04:48.970 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] launch -autostart -reset -mode probe3 -art shape -speedTier 1 t=1795845888.969746
+2026-11-28 06:04:48.973 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845888.973175
+2026-11-28 06:04:48.974 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845888.974802
+2026-11-28 06:04:48.976 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845888.976349
+2026-11-28 06:04:48.976 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845888.976845
+2026-11-28 06:04:48.976 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845888.976977
+2026-11-28 06:04:48.977 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845888.977092
+2026-11-28 06:04:48.985 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845888.985822
+2026-11-28 06:04:49.026 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] end_call id=BE97B213-2AF1-49B5-8F33-8D658D514FBA t=1795845889.025981
+2026-11-28 06:04:49.476 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=probe3 anchor=1795845889.4761019 timers=16 t=1795845889.476324
+2026-11-28 06:04:49.544 Df SpikeApp[13058:aa6a] [com.islandrunner.spike:app] request_ok id=FE19FA09-4DFB-4219-98A6-2454DE2EE6CF t=1795845889.544930
+2026-11-28 06:04:49.836 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019 t=1795845889.836312
+2026-11-28 06:04:49.836 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019
+2026-11-28 06:04:49.839 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019 t=1795845889.839008
+2026-11-28 06:04:49.839 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019
+2026-11-28 06:04:49.843 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019 t=1795845889.843295
+2026-11-28 06:04:49.843 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019
+2026-11-28 06:04:50.296 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019 t=1795845890.296099
+2026-11-28 06:04:50.296 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019
+2026-11-28 06:04:50.297 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019 t=1795845890.297163
+2026-11-28 06:04:50.297 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019
+2026-11-28 06:04:50.297 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019 t=1795845890.297402
+2026-11-28 06:04:50.297 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=probe3 anchor=1795845889.4761019
+2026-11-28 06:05:30.021 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] launch -autostart -reset -mode p0 -art shape -speedTier 1 t=1795845930.021455
+2026-11-28 06:05:30.023 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845930.023882
+2026-11-28 06:05:30.024 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845930.024413
+2026-11-28 06:05:30.024 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845930.024878
+2026-11-28 06:05:30.025 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845930.025258
+2026-11-28 06:05:30.025 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845930.025379
+2026-11-28 06:05:30.025 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845930.025475
+2026-11-28 06:05:30.036 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845930.036180
+2026-11-28 06:05:30.060 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] end_call id=FE19FA09-4DFB-4219-98A6-2454DE2EE6CF t=1795845930.060798
+2026-11-28 06:05:30.456 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=p0 anchor=1795845930.456835 timers=16 t=1795845930.456887
+2026-11-28 06:05:30.488 Df SpikeApp[14267:b67c] [com.islandrunner.spike:app] request_ok id=CCEEFBDC-6172-4273-8E05-97E43820DB1C t=1795845930.488323
+2026-11-28 06:05:32.362 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835 t=1795845932.362611
+2026-11-28 06:05:32.363 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835
+2026-11-28 06:05:32.370 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835 t=1795845932.370353
+2026-11-28 06:05:32.370 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835
+2026-11-28 06:05:32.372 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835 t=1795845932.372017
+2026-11-28 06:05:32.372 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835
+2026-11-28 06:05:34.337 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835 t=1795845934.337379
+2026-11-28 06:05:34.337 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835
+2026-11-28 06:05:34.339 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835 t=1795845934.339467
+2026-11-28 06:05:34.339 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835
+2026-11-28 06:05:34.346 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835 t=1795845934.346883
+2026-11-28 06:05:34.347 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=p0 anchor=1795845930.456835
+2026-11-28 06:06:00.566 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] launch -autostart -reset -mode p0w -art shape -speedTier 1 t=1795845960.566737
+2026-11-28 06:06:00.568 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845960.568244
+2026-11-28 06:06:00.568 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845960.568567
+2026-11-28 06:06:00.568 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845960.568927
+2026-11-28 06:06:00.569 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845960.569253
+2026-11-28 06:06:00.569 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845960.569347
+2026-11-28 06:06:00.569 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845960.569447
+2026-11-28 06:06:00.575 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845960.574987
+2026-11-28 06:06:00.592 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] end_call id=CCEEFBDC-6172-4273-8E05-97E43820DB1C t=1795845960.591952
+2026-11-28 06:06:00.798 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=p0w anchor=1795845960.798749 timers=16 t=1795845960.798793
+2026-11-28 06:06:00.814 Df SpikeApp[15308:c1b2] [com.islandrunner.spike:app] request_ok id=39A97153-B39B-4789-B001-A1AB0CC9D1CE t=1795845960.814266
+2026-11-28 06:06:00.948 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749 t=1795845960.948397
+2026-11-28 06:06:00.948 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749
+2026-11-28 06:06:00.950 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749 t=1795845960.950308
+2026-11-28 06:06:00.950 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749
+2026-11-28 06:06:00.950 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749 t=1795845960.950828
+2026-11-28 06:06:00.950 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749
+2026-11-28 06:06:01.829 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749 t=1795845961.829809
+2026-11-28 06:06:01.829 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749
+2026-11-28 06:06:01.830 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749 t=1795845961.830530
+2026-11-28 06:06:01.830 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749
+2026-11-28 06:06:01.831 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749 t=1795845961.831922
+2026-11-28 06:06:01.831 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=p0w anchor=1795845960.798749
+2026-11-28 06:06:22.953 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] launch -autostart -reset -mode sprite -art shape -speedTier 1 t=1795845982.952935
+2026-11-28 06:06:22.954 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845982.954655
+2026-11-28 06:06:22.955 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845982.955169
+2026-11-28 06:06:22.955 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795845982.955501
+2026-11-28 06:06:22.955 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795845982.955825
+2026-11-28 06:06:22.955 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795845982.955930
+2026-11-28 06:06:22.956 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795845982.956313
+2026-11-28 06:06:22.967 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795845982.967092
+2026-11-28 06:06:22.986 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] end_call id=39A97153-B39B-4789-B001-A1AB0CC9D1CE t=1795845982.986192
+2026-11-28 06:06:23.436 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=sprite anchor=1795845983.435916 timers=16 t=1795845983.436020
+2026-11-28 06:06:23.493 Df SpikeApp[16355:cc3f] [com.islandrunner.spike:app] request_ok id=D5C5CE05-2CA0-4D79-B492-5F92DA3D86CE t=1795845983.492841
+2026-11-28 06:06:23.971 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916 t=1795845983.971597
+2026-11-28 06:06:23.971 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916
+2026-11-28 06:06:23.973 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916 t=1795845983.973546
+2026-11-28 06:06:23.973 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916
+2026-11-28 06:06:23.973 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916 t=1795845983.973994
+2026-11-28 06:06:23.974 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916
+2026-11-28 06:06:26.405 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916 t=1795845986.405265
+2026-11-28 06:06:26.405 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916
+2026-11-28 06:06:26.407 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916 t=1795845986.407039
+2026-11-28 06:06:26.407 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916
+2026-11-28 06:06:26.407 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916 t=1795845986.407507
+2026-11-28 06:06:26.407 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=sprite anchor=1795845983.435916
+2026-11-28 06:06:51.824 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] launch -autostart -reset -mode spritew -art shape -speedTier 1 t=1795846011.824656
+2026-11-28 06:06:51.827 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795846011.827085
+2026-11-28 06:06:51.827 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795846011.827587
+2026-11-28 06:06:51.827 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795846011.827939
+2026-11-28 06:06:51.828 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795846011.828225
+2026-11-28 06:06:51.828 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795846011.828322
+2026-11-28 06:06:51.828 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795846011.828355
+2026-11-28 06:06:51.834 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795846011.834269
+2026-11-28 06:06:51.847 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] end_call id=D5C5CE05-2CA0-4D79-B492-5F92DA3D86CE t=1795846011.847142
+2026-11-28 06:06:52.038 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] request_call tier=1 art=shape mode=spritew anchor=1795846012.0389009 timers=16 t=1795846012.038955
+2026-11-28 06:06:52.097 Df SpikeApp[17237:d50a] [com.islandrunner.spike:app] request_ok id=91EDDC5A-A4C9-45E7-80D7-0C1736203EED t=1795846012.097118
+2026-11-28 06:06:52.595 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009 t=1795846012.595257
+2026-11-28 06:06:52.596 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009
+2026-11-28 06:06:52.601 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009 t=1795846012.601264
+2026-11-28 06:06:52.601 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009
+2026-11-28 06:06:52.602 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009 t=1795846012.602240
+2026-11-28 06:06:52.602 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009
+2026-11-28 06:06:53.723 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009 t=1795846013.723790
+2026-11-28 06:06:53.723 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009
+2026-11-28 06:06:53.724 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009 t=1795846013.724642
+2026-11-28 06:06:53.724 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009
+2026-11-28 06:06:53.725 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009 t=1795846013.725007
+2026-11-28 06:06:53.725 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=1 timers=16 art=shape mode=spritew anchor=1795846012.0389009
+2026-11-28 06:07:18.844 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] launch -autostart -reset -mode spritew -art hamster -speedTier 2 t=1795846038.844185
+2026-11-28 06:07:18.848 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] font_file app IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795846038.848595
+2026-11-28 06:07:18.849 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] font_file app IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795846038.849562
+2026-11-28 06:07:18.850 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskEven.ttf bytes=1492 psNames=["IRMaskEven"] t=1795846038.850668
+2026-11-28 06:07:18.852 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] font_file appex:RunnerLiveActivity.appex IRMaskOdd.ttf bytes=1484 psNames=["IRMaskOdd"] t=1795846038.852959
+2026-11-28 06:07:18.853 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] font_loaded IRMaskEven app=true t=1795846038.853343
+2026-11-28 06:07:18.853 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] font_loaded IRMaskOdd app=true t=1795846038.853491
+2026-11-28 06:07:18.862 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] enabled areActivitiesEnabled=true t=1795846038.862245
+2026-11-28 06:07:18.887 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] end_call id=91EDDC5A-A4C9-45E7-80D7-0C1736203EED t=1795846038.887236
+2026-11-28 06:07:19.207 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] request_call tier=2 art=hamster mode=spritew anchor=1795846039.2068992 timers=32 t=1795846039.207284
+2026-11-28 06:07:19.263 Df SpikeApp[18127:dda8] [com.islandrunner.spike:app] request_ok id=063855B1-8DF1-443B-B9D7-67CDE811B5D5 t=1795846039.263089
+2026-11-28 06:07:20.039 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992 t=1795846040.039864
+2026-11-28 06:07:20.040 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992
+2026-11-28 06:07:20.047 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992 t=1795846040.047420
+2026-11-28 06:07:20.047 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992
+2026-11-28 06:07:20.049 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992 t=1795846040.049572
+2026-11-28 06:07:20.049 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992
+2026-11-28 06:07:23.500 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render expanded tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992 t=1795846043.500075
+2026-11-28 06:07:23.500 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render expanded tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992
+2026-11-28 06:07:23.501 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render compactLeading tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992 t=1795846043.501037
+2026-11-28 06:07:23.501 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render compactLeading tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992
+2026-11-28 06:07:23.504 Df RunnerLiveActivity[7715:71ba] [com.islandrunner.spike:widget] render minimal tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992 t=1795846043.504812
+2026-11-28 06:07:23.504 Df RunnerLiveActivity[7715:71ba] (Foundation) IRSPIKE render minimal tier=2 timers=32 art=hamster mode=spritew anchor=1795846039.2068992
+

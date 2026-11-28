@@ -1,0 +1,80 @@
+host_time,event,case
+1795845651.575,to_background,g1
+1795845667.300,record_start,g1_control
+1795845672.754,record_stop_call,g1_control
+1795845675.608,record_stopped,g1_control
+1795845675.852,launch_app,-calibrate 8
+1795845682.291,record_start,g2_calibrate_8hz
+1795845690.563,record_stop_call,g2_calibrate_8hz
+1795845708.134,record_stopped,g2_calibrate_8hz
+1795845710.500,launch_app,-autostart -reset -mode still -art hamster -speedTier 1
+1795845715.292,screenshot,q_still_app
+1795845726.148,to_background,q_still
+1795845730.199,screenshot,q_still_compact
+1795845736.949,record_start,q_still
+1795845743.177,record_stop_call,q_still
+1795845743.517,record_stopped,q_still
+1795845743.569,launch_app,-autostart -reset -mode probe0 -art shape -speedTier 1
+1795845749.500,screenshot,q_probe0_app
+1795845750.422,to_background,q_probe0
+1795845772.929,screenshot,q_probe0_compact
+1795845823.974,record_start,q_probe0
+1795845832.076,record_stop_call,q_probe0
+1795845832.470,record_stopped,q_probe0
+1795845832.685,launch_app,-autostart -reset -mode probe1 -art shape -speedTier 1
+1795845839.158,screenshot,q_probe1_app
+1795845840.797,to_background,q_probe1
+1795845845.726,screenshot,q_probe1_compact
+1795845848.777,record_start,q_probe1
+1795845857.065,record_stop_call,q_probe1
+1795845857.398,record_stopped,q_probe1
+1795845857.553,launch_app,-autostart -reset -mode probe2 -art shape -speedTier 1
+1795845863.678,screenshot,q_probe2_app
+1795845864.664,to_background,q_probe2
+1795845870.252,screenshot,q_probe2_compact
+1795845876.336,record_start,q_probe2
+1795845886.526,record_stop_call,q_probe2
+1795845886.887,record_stopped,q_probe2
+1795845886.945,launch_app,-autostart -reset -mode probe3 -art shape -speedTier 1
+1795845893.879,screenshot,q_probe3_app
+1795845894.770,to_background,q_probe3
+1795845899.953,screenshot,q_probe3_compact
+1795845902.477,record_start,q_probe3
+1795845912.854,record_stop_call,q_probe3
+1795845915.238,record_stopped,q_probe3
+1795845915.942,launch_app,-autostart -reset -mode p0 -art shape -speedTier 1
+1795845925.430,screenshot,q_p0_app
+1795845939.914,to_background,q_p0
+1795845946.059,screenshot,q_p0_compact
+1795845947.903,record_start,q_p0
+1795845957.997,record_stop_call,q_p0
+1795845958.448,record_stopped,q_p0
+1795845958.483,launch_app,-autostart -reset -mode p0w -art shape -speedTier 1
+1795845963.351,screenshot,q_p0w_app
+1795845965.976,to_background,q_p0w
+1795845968.678,screenshot,q_p0w_compact
+1795845969.653,record_start,q_p0w
+1795845979.931,record_stop_call,q_p0w
+1795845980.775,record_stopped,q_p0w
+1795845980.931,launch_app,-autostart -reset -mode sprite -art shape -speedTier 1
+1795845990.112,screenshot,q_sprite_app
+1795845993.074,to_background,q_sprite
+1795845997.429,screenshot,q_sprite_compact
+1795845999.123,record_start,q_sprite
+1795846009.310,record_stop_call,q_sprite
+1795846009.790,record_stopped,q_sprite
+1795846009.842,launch_app,-autostart -reset -mode spritew -art shape -speedTier 1
+1795846016.407,screenshot,q_spritew_app
+1795846017.250,to_background,q_spritew
+1795846021.575,screenshot,q_spritew_compact
+1795846024.445,record_start,q_spritew
+1795846034.794,record_stop_call,q_spritew
+1795846035.359,record_stopped,q_spritew
+1795846036.630,launch_app,-autostart -reset -mode spritew -art hamster -speedTier 2
+1795846047.631,screenshot,q_spritew_h_app
+1795846054.975,to_background,q_spritew_h
+1795846061.108,screenshot,q_spritew_h_compact
+1795846067.330,record_start,q_spritew_h
+1795846077.479,record_stop_call,q_spritew_h
+1795846077.825,record_stopped,q_spritew_h
+1795846078.566,cases_done,probe

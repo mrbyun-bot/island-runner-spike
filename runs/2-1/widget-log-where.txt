@@ -1,0 +1,2 @@
+get_app_container(appex)=없음
+/Users/runner/Library/Developer/CoreSimulator/Devices/7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA/data/Documents/widget-log.txt

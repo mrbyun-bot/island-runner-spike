@@ -1,0 +1,53 @@
+/Users/runner/work/island-runner-spike/island-runner-spike/DerivedData/Build/Products/Debug-iphonesimulator/SpikeApp.app:
+total 1784
+-rwxr-xr-x   1 runner  staff   34800 Nov 28 05:58 __preview.dylib
+drwxr-xr-x   3 runner  staff      96 Nov 28 05:58 _CodeSignature
+drwxr-xr-x  23 runner  staff     736 Nov 28 05:58 .
+drwxr-xr-x@  8 runner  staff     256 Nov 28 05:58 ..
+-rw-r--r--   1 runner  staff    9221 Nov 28 05:58 hamster_bg@3x.png
+-rw-r--r--   1 runner  staff    9476 Nov 28 05:58 hamster_rest_1@3x.png
+-rw-r--r--   1 runner  staff    9139 Nov 28 05:58 hamster_rest_2@3x.png
+-rw-r--r--   1 runner  staff    3203 Nov 28 05:58 hamster_run_1@3x.png
+-rw-r--r--   1 runner  staff    2996 Nov 28 05:58 hamster_run_2@3x.png
+-rw-r--r--   1 runner  staff    2578 Nov 28 05:58 hamster_run_3@3x.png
+-rw-r--r--   1 runner  staff    2875 Nov 28 05:58 hamster_run_4@3x.png
+-rw-r--r--   1 runner  staff   11221 Nov 28 05:58 hamster_still@3x.png
+-rw-r--r--   1 runner  staff    1145 Nov 28 05:58 Info.plist
+-rw-r--r--   1 runner  staff    1492 Nov 28 05:58 IRMaskEven.ttf
+-rw-r--r--   1 runner  staff    1484 Nov 28 05:58 IRMaskOdd.ttf
+-rw-r--r--   1 runner  staff       8 Nov 28 05:58 PkgInfo
+drwxr-xr-x   3 runner  staff      96 Nov 28 05:58 PlugIns
+-rw-r--r--   1 runner  staff    2619 Nov 28 05:58 shape_1@3x.png
+-rw-r--r--   1 runner  staff    1165 Nov 28 05:58 shape_2@3x.png
+-rw-r--r--   1 runner  staff    1859 Nov 28 05:58 shape_3@3x.png
+-rw-r--r--   1 runner  staff    1006 Nov 28 05:58 shape_4@3x.png
+-rwxr-xr-x   1 runner  staff   58272 Nov 28 05:58 SpikeApp
+-rwxr-xr-x   1 runner  staff  714336 Nov 28 05:58 SpikeApp.debug.dylib
+
+/Users/runner/work/island-runner-spike/island-runner-spike/DerivedData/Build/Products/Debug-iphonesimulator/SpikeApp.app/PlugIns:
+total 0
+drwxr-xr-x   3 runner  staff   96 Nov 28 05:58 .
+drwxr-xr-x  23 runner  staff  736 Nov 28 05:58 ..
+drwxr-xr-x  21 runner  staff  672 Nov 28 05:58 RunnerLiveActivity.appex
+total 1376
+-rwxr-xr-x   1 runner  staff   34800 Nov 28 05:58 __preview.dylib
+drwxr-xr-x   3 runner  staff      96 Nov 28 05:58 _CodeSignature
+drwxr-xr-x  21 runner  staff     672 Nov 28 05:58 .
+drwxr-xr-x   3 runner  staff      96 Nov 28 05:58 ..
+-rw-r--r--   1 runner  staff    9221 Nov 28 05:58 hamster_bg@3x.png
+-rw-r--r--   1 runner  staff    9476 Nov 28 05:58 hamster_rest_1@3x.png
+-rw-r--r--   1 runner  staff    9139 Nov 28 05:58 hamster_rest_2@3x.png
+-rw-r--r--   1 runner  staff    3203 Nov 28 05:58 hamster_run_1@3x.png
+-rw-r--r--   1 runner  staff    2996 Nov 28 05:58 hamster_run_2@3x.png
+-rw-r--r--   1 runner  staff    2578 Nov 28 05:58 hamster_run_3@3x.png
+-rw-r--r--   1 runner  staff    2875 Nov 28 05:58 hamster_run_4@3x.png
+-rw-r--r--   1 runner  staff   11221 Nov 28 05:58 hamster_still@3x.png
+-rw-r--r--   1 runner  staff     951 Nov 28 05:58 Info.plist
+-rw-r--r--   1 runner  staff    1492 Nov 28 05:58 IRMaskEven.ttf
+-rw-r--r--   1 runner  staff    1484 Nov 28 05:58 IRMaskOdd.ttf
+-rwxr-xr-x   1 runner  staff   58288 Nov 28 05:58 RunnerLiveActivity
+-rwxr-xr-x   1 runner  staff  511200 Nov 28 05:58 RunnerLiveActivity.debug.dylib
+-rw-r--r--   1 runner  staff    2619 Nov 28 05:58 shape_1@3x.png
+-rw-r--r--   1 runner  staff    1165 Nov 28 05:58 shape_2@3x.png
+-rw-r--r--   1 runner  staff    1859 Nov 28 05:58 shape_3@3x.png
+-rw-r--r--   1 runner  staff    1006 Nov 28 05:58 shape_4@3x.png

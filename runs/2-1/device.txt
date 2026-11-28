@@ -1,0 +1,3 @@
+udid=7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA
+name=iPhone 17 Pro
+runtime=com.apple.CoreSimulator.SimRuntime.iOS-26-5

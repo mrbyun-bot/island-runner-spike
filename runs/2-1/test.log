@@ -1,0 +1,40 @@
+Command line invocation:
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/xcodebuild -project IslandRunnerSpike.xcodeproj -scheme SpikeApp -destination "platform=iOS Simulator,id=7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA" -derivedDataPath /Users/runner/work/island-runner-spike/island-runner-spike/DerivedData -resultBundlePath /Users/runner/work/island-runner-spike/island-runner-spike/out/tests.xcresult test-without-building
+
+Writing result bundle at path:
+	/Users/runner/work/island-runner-spike/island-runner-spike/out/tests.xcresult
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, arch:arm64, id:7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA, OS:26.5, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:x86_64, id:7F81FA48-EEA2-44A5-AC62-55FB6DDF82EA, OS:26.5, name:iPhone 17 Pro }
+Test Suite 'All tests' started at 2026-11-28 05:58:55.027.
+Test Suite 'SpikeTests.xctest' started at 2026-11-28 05:58:55.028.
+Test Suite 'FrameScheduleTests' started at 2026-11-28 05:58:55.028.
+Test Case '-[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testExactlyOneFrameVisibleAndMatchesDesign]' passed (0.029 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testFloorDivAndNegativeDesignedFrame]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testFloorDivAndNegativeDesignedFrame]' passed (0.001 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testLoopAndHoldMatchDecisionTable]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testLoopAndHoldMatchDecisionTable]' passed (0.001 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testOffsetsAreInsideOneSecond]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testOffsetsAreInsideOneSecond]' passed (0.001 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testTierIsClamped]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testTierIsClamped]' passed (0.000 seconds).
+Test Case '-[SpikeTests.FrameScheduleTests testTimerStartIsBeforeAnchor]' started.
+Test Case '-[SpikeTests.FrameScheduleTests testTimerStartIsBeforeAnchor]' passed (0.127 seconds).
+Test Suite 'FrameScheduleTests' passed at 2026-11-28 05:58:55.190.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.159 (0.162) seconds
+Test Suite 'SpikeTests.xctest' passed at 2026-11-28 05:58:55.190.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.159 (0.163) seconds
+Test Suite 'All tests' passed at 2026-11-28 05:58:55.191.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.159 (0.164) seconds
+2026-11-28 05:58:56.225 xcodebuild[3184:14050] [MT] IDETestOperationsObserverDebug: 37.841 elapsed -- Testing started completed.
+2026-11-28 05:58:56.225 xcodebuild[3184:14050] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-28 05:58:56.225 xcodebuild[3184:14050] [MT] IDETestOperationsObserverDebug: 37.841 sec, +37.841 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/island-runner-spike/island-runner-spike/out/tests.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

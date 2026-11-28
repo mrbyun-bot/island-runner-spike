@@ -3,3 +3,4 @@
 | 회차 | 실행 | 시각(UTC) | 단계 | 빌드 | 단위 테스트 | 촬영 | 커밋 |
 |---|---|---|---|---|---|---|---|
 | 1/12 | 1-1 | 2026-11-27T02:47:13Z | all | success | failure | success | 932f649ecbbfb9bcd3200f9002646f6f5b228915 |
+| 2/12 | 2-1 | 2026-11-28T06:08:54Z | probe | success | success | success | b8f41fbb5756db51df7a6a82e547a30d7e935225 |

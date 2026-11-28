@@ -1,0 +1,35 @@
+{
+  "BuildMachineOSBuild" => "25G332"
+  "CFBundleDevelopmentRegion" => "ko"
+  "CFBundleDisplayName" => "러너 스파이크 위젯"
+  "CFBundleExecutable" => "RunnerLiveActivity"
+  "CFBundleIdentifier" => "com.islandrunner.spike.app.liveactivity"
+  "CFBundleInfoDictionaryVersion" => "6.0"
+  "CFBundleName" => "RunnerLiveActivity"
+  "CFBundlePackageType" => "XPC!"
+  "CFBundleShortVersionString" => "0.1"
+  "CFBundleSupportedPlatforms" => [
+    0 => "iPhoneSimulator"
+  ]
+  "CFBundleVersion" => "1"
+  "DTCompiler" => "com.apple.compilers.llvm.clang.1_0"
+  "DTPlatformBuild" => "23F81a"
+  "DTPlatformName" => "iphonesimulator"
+  "DTPlatformVersion" => "26.5"
+  "DTSDKBuild" => "23F81a"
+  "DTSDKName" => "iphonesimulator26.5"
+  "DTXcode" => "2660"
+  "DTXcodeBuild" => "17F113"
+  "MinimumOSVersion" => "17.0"
+  "NSExtension" => {
+    "NSExtensionPointIdentifier" => "com.apple.widgetkit-extension"
+  }
+  "UIAppFonts" => [
+    0 => "IRMaskEven.ttf"
+    1 => "IRMaskOdd.ttf"
+  ]
+  "UIDeviceFamily" => [
+    0 => 1
+    1 => 2
+  ]
+}
