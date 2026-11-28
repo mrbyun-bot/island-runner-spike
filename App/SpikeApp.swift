@@ -14,8 +14,8 @@ import SwiftUI
 struct LaunchOptions {
     var autostart = false
     var speedTier = 1
-    var art = "shape"
-    var mode = "sprite"
+    var art = "hamster"
+    var mode = "spritew"
     var reset = false
     var calibrateHz: Double? = nil
 
