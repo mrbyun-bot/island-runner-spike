@@ -18,7 +18,7 @@ open IslandRunnerSpike.xcodeproj
 
 ## 2. Xcode 에서 서명 설정 (한 번만)
 1. 메뉴 Xcode > Settings > Accounts > 왼쪽 아래 `+` > Apple ID 로그인.
-2. 왼쪽 맨 위 `SpikeApp` 프로젝트 클릭 > TARGETS 에서 `SpikeApp` 선택 > **Signing & Capabilities**.
+2. 왼쪽 맨 위 `IslandRunnerSpike` 프로젝트 클릭 > TARGETS 에서 `SpikeApp` 선택 > **Signing & Capabilities**.
 3. "Automatically manage signing" 체크, Team 은 **(Personal Team)** 선택.
 4. TARGETS 의 `RunnerLiveActivity` 도 똑같이 설정(Team 같은 것).
 5. 빨간 오류가 나오면 오류 문구를 캡처해서 알려 준다(번들 ID 가 이미 쓰인다는 오류면 이름을 바꿔 준다).
