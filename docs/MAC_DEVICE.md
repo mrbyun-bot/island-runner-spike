@@ -11,10 +11,10 @@ git clone https://github.com/mrbyun-bot/island-runner-spike.git
 cd island-runner-spike
 brew install xcodegen      # brew 가 없다고 나오면 https://brew.sh 안내대로 먼저 설치
 xcodegen generate
-open SpikeApp.xcodeproj
+open IslandRunnerSpike.xcodeproj
 ```
 
-`xcodegen generate` 끝에 "Created project at ..." 가 나오면 된다. 프로젝트 파일 이름이 다르면 `ls *.xcodeproj` 로 확인.
+`xcodegen generate` 끝에 "Created project at ..." 가 나오면 된다. 프로젝트 파일 이름이 다르면 `ls *.xcodeproj` 로 확인(이름은 IslandRunnerSpike.xcodeproj 일 것).
 
 ## 2. Xcode 에서 서명 설정 (한 번만)
 1. 메뉴 Xcode > Settings > Accounts > 왼쪽 아래 `+` > Apple ID 로그인.
