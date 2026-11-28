@@ -1,6 +1,13 @@
 # XcodeGen 프로젝트 정의. 리눅스에서는 이 파일만 고치고, 맥 러너에서 `xcodegen generate` 로
 # IslandRunnerSpike.xcodeproj 와 Generated/*.plist 를 만든다(둘 다 저장소에 넣지 않는다).
 # 타깃 3개: 앱(SpikeApp), Live Activity 위젯 확장(RunnerLiveActivity, 위젯은 1개만), 단위 테스트(SpikeTests)
+#
+# 그림(Assets/frames, characters/ 하위 폴더 포함)은 앱·확장 두 타깃 모두 buildPhase: resources 로 넣는다.
+# XcodeGen 은 일반 폴더를 그룹으로 만들고 안의 파일을 하나씩 Copy Bundle Resources 에 넣으므로
+# 번들 맨 위에 "평평하게" 복사된다(폴더 구조가 남는 건 `type: folder` 로 폴더 참조를 만들 때뿐).
+# 그래서 UIImage(named:) 는 폴더 이름 없이 찾고, 하위 폴더끼리 파일 이름이 같으면 충돌한다.
+# 옛 임시 햄스터를 hamsterold_* 로 바꾼 이유가 이것이다(새 characters/hamster_* 와 겹침 방지).
+# src/ 와 preview-*.png, *.gif 는 번들에 넣지 않는다. 폴더 평평함은 맥에서 확인(README "맥에서 확인할 것").
 name: IslandRunnerSpike
 options:
   bundleIdPrefix: com.islandrunner.spike
@@ -98,10 +105,11 @@ targets:
   SpikeTests:
     type: bundle.unit-test
     platform: iOS
-    # 앱에 붙지 않는 단독 테스트. 프레임 배치 계산(순수 함수)만 본다.
+    # 앱에 붙지 않는 단독 테스트. 프레임 배치 계산·그림 이름 목록(순수 함수)만 본다.
     sources:
       - path: Tests
       - path: Shared/FrameSchedule.swift
+      - path: Shared/ArtSet.swift
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.islandrunner.spike.tests

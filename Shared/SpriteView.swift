@@ -48,7 +48,8 @@ public struct RunnerSprite: View {
 
     public var body: some View {
         let plan = FrameSchedule.plan(tier: tier)
-        let assets = ArtSet.forTier(tier, art: art)
+        // 큰 칸(확장·잠금 화면)이면 _L 파일. 이름은 ArtSet 한 곳에서만 정한다.
+        let assets = ArtSet.forTier(tier, art: art, large: size > SpikeConstants.compactSize)
         let layout: TimerLayout = (mode == "p0w" || mode == "spritew") ? .wideFrame : .fixedSize
         Group {
             switch mode {
@@ -190,12 +191,14 @@ struct TimerMaskText: View {
 }
 
 /// 번들 안 PNG(@3x)를 읽는다. 없으면 눈에 띄는 빨간 칸을 그려 바로 알 수 있게 한다.
+/// XcodeGen 은 그림을 번들 맨 위에 평평하게 복사하지만(project.yml 머리말), 폴더 구조로 남은 경우에 대비해
+/// Assets/frames/characters 하위 폴더도 직접 찾아본다.
 struct SpriteImage: View {
     let name: String
     let size: CGFloat
 
     var body: some View {
-        if let image = UIImage(named: name, in: .main, with: nil) {
+        if let image = SpriteImage.load(name) {
             Image(uiImage: image)
                 .resizable()
                 .interpolation(.high)
@@ -205,5 +208,18 @@ struct SpriteImage: View {
                 .fill(Color.red)
                 .frame(width: size, height: size)
         }
+    }
+
+    static func load(_ name: String) -> UIImage? {
+        if let image = UIImage(named: name, in: .main, with: nil) {
+            return image
+        }
+        for dir in ["characters", "frames/characters", "Assets/frames/characters", "frames", "Assets/frames"] {
+            if let path = Bundle.main.path(forResource: "\(name)@3x", ofType: "png", inDirectory: dir),
+               let data = UIImage(contentsOfFile: path)?.cgImage {
+                return UIImage(cgImage: data, scale: 3, orientation: .up)
+            }
+        }
+        return nil
     }
 }

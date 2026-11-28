@@ -6,6 +6,10 @@
 - 원격 저장소: `git@github.com:mrbyun-bot/island-runner-spike.git` (main 에 코드, `results` 브랜치에 맥 실행 결과).
 - 그림·글꼴은 모두 팀이 직접 만들었다. `widget-anim-lab`, `WidgetAnimation`(둘 다 MIT)은 원리 설명만 참고했고 코드는 보지 않고 새로 썼다.
 
+## 맥북에서 실기기로 확인하기 (한 줄)
+
+맥북에서 `git pull` 한 뒤 Xcode 에서 ▶ 를 누른다. 앱 화면의 "캐릭터" 줄(햄스터·펭귄·로켓)을 누르면 Live Activity 가 해당 그림으로 다시 시작된다. 디자이너 그림이 아직 없으면 그 캐릭터는 빨간 칸으로 보인다(없는 파일 표시).
+
 ## 원리 한 단락
 
 `Text(timerInterval:)` 는 시스템이 1초마다 숫자를 바꿔 그린다. 시작 시각을 1/8초씩 어긋나게 잡은 타이머를 여러 개 두면 숫자가 바뀌는 순간이 서로 다르다. 마스크 폰트는 마지막 숫자가 짝수(IRMaskEven) 또는 홀수(IRMaskOdd)일 때만 칸을 채우므로 타이머 하나가 "2초 중 정해진 1초 동안 열리는 창"이 되고, 창 두 개를 곱하면(마스크의 마스크) 1/8초 구간만 열린다. 프레임 그림(PNG)은 그 창으로만 보인다. 색은 PNG 가 내고 폰트는 언제 보일지만 정한다.
@@ -19,7 +23,10 @@ RunnerLiveActivity/             Live Activity 위젯 확장 (위젯 1개)
 Shared/                         앱·확장 공용: 데이터 정의, 프레임 배치 계산, 캐릭터 뷰
 Tests/                          프레임 배치 계산 단위 테스트 (XCTest)
 Fonts/                          tools/fontgen.py 가 만든 마스크 폰트 2개 + ttx 덤프
-Assets/frames/                  그래픽 디자이너 그림 (도형 4장, 햄스터 8장, 108×108px) — 개발자는 건드리지 않음
+Assets/frames/                  그래픽 디자이너 그림 (도형 4장, 옛 햄스터 hamsterold_* 8장, 108×108px) — 개발자는 건드리지 않음
+Assets/frames/characters/       새 캐릭터 3종 {hamster,penguin,rocket}_{run_1..4,rest_1..2,still}@3x.png (108px), 같은 이름에 _L (240px)
+Shared/ArtSet.swift             art 값 → 그림 파일 이름을 정하는 유일한 곳
+tools/check_art_files.py        ArtSet 이름 목록과 실제 파일·크기 대조 (없으면 실패)
 tools/schedule.py               프레임 배치 계산 파이썬판 + 검증표 출력
 tools/fontgen.py                마스크 폰트 생성·검사
 tools/ci/run_cases.sh           맥 러너 촬영 순서 (G1 → G2 → P0 → P1 → P2 → P2b → P3 → J7 시도)
@@ -179,6 +186,23 @@ xcrun simctl launch booted com.islandrunner.spike.app -calibrate 8   # G2 교정
 6. `log stream --predicate 'subsystem == "..." OR eventMessage BEGINSWITH "IRSPIKE"'` 와 `log show --info --debug` 가 `simctl spawn` 안에서 그대로 되는지.
 7. `.font(.custom(_, fixedSize: 6))` 처럼 아주 작은 크기가 축소 칸에서 그대로 그려지는지(probe3).
 8. 넓은 틀(`.frame(width: 36 * 8)`)을 바깥 36pt 틀에 오른쪽 정렬하면 SwiftUI 가 왼쪽으로 넘치게 두고 `.clipped()` 가 잘라 내는지. 앱 화면 캡처(`q_p0w_app.png`)로 앱 안에서 먼저 본다.
+
+## 캐릭터 그림 연결 (2026-11-28)
+
+- art 값: `hamster2`(기본, 새 햄스터), `penguin`, `rocket`, 시험·회귀용 `hamster`(옛 임시), `shape`. 허용 목록·기본값은 `Shared/ArtSet.swift` (`SpikeApp.swift` 실행 인자 `-art` 도 같은 목록).
+- 작은 칸(compact·minimal)과 앱 36pt 미리보기는 108px 파일, 확장·잠금 화면과 앱 80pt 미리보기는 `_L` 240px 파일. 크기가 36pt 보다 크면 큰 파일을 쓴다(`SpriteView.swift` 한 줄).
+- 옛 임시 햄스터 파일은 `hamsterold_*` 로 이름을 바꿨다. 새 `characters/hamster_*` 와 번들에서 이름이 겹치기 때문이다(번들은 폴더 없이 평평하게 풀림).
+- `python3 tools/check_art_files.py [art]` : 디자이너 그림이 다 들어왔는지 점검.
+- 캐릭터를 바꾸면 `ActivityController.startOrUpdate` 가 art 가 다른 활동을 끝내고 다시 연다(art 는 정적 속성이라 update 로 못 바꿈).
+
+### 맥에서 확인할 것 (2026-11-28 추가, 컴파일 못 함)
+
+1. 번들이 평평한지: 빌드한 `.app` 과 `.appex` 맨 위에 `penguin_run_1@3x.png` 같은 파일이 있어야 한다(`ls`로 확인). 폴더(`characters/`)로 남아 있어도 `SpriteImage.load` 가 하위 폴더를 찾아보지만, 그 폴백은 처음 써 본 것이다.
+2. `ArtSet.swift` 가 `import Foundation` 만으로 `CGFloat` 를 쓰는 것(iOS 에서는 되는 것으로 앎).
+3. `ContentView` 에 직접 쓴 `init` 이 `@ObservedObject`·`@State` 를 `_selectedArt = State(initialValue:)` 로 채우는 방식.
+4. 캐릭터 버튼 연속 누름: 끝내고 다시 여는 사이 `Activity.activities` 가 비는지(`end(.immediate)` 직후). 안 비면 "시작 실패"가 상태 줄에 나온다.
+5. 확장 화면 왼쪽에 80pt 캐릭터 + 오른쪽 단계 글자 + 아래 한 줄이 아일랜드 확장 높이에 들어가는지(잘리면 80 을 줄이거나 아래 글자를 뺀다).
+6. 단위 테스트 타깃에 `Shared/ArtSet.swift` 를 추가했다(FrameSchedule.swift 와 함께). 컴파일되는지.
 
 ## 하지 않은 것
 

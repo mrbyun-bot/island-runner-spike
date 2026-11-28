@@ -15,7 +15,7 @@ struct RunnerLiveActivity: Widget {
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
-                    sprite(context, place: "expanded")
+                    sprite(context, place: "expanded", size: SpikeConstants.largeSize)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Text(tierLabel(context.state.speedTier))
@@ -41,13 +41,14 @@ struct RunnerLiveActivity: Widget {
         }
     }
 
-    private func sprite(_ context: ActivityViewContext<RunnerAttributes>, place: String) -> some View {
+    private func sprite(_ context: ActivityViewContext<RunnerAttributes>, place: String,
+                        size: CGFloat = SpikeConstants.compactSize) -> some View {
         let plan = FrameSchedule.plan(tier: context.state.speedTier)
         _ = WidgetLog.startupCheck
         WidgetLog.write("render", "\(place) tier=\(plan.tier) timers=\(plan.timerTextCount) art=\(context.attributes.art) mode=\(context.attributes.mode) anchor=\(context.state.anchor.timeIntervalSince1970)")
         return RunnerSprite(tier: context.state.speedTier, anchor: context.state.anchor,
                             art: context.attributes.art, mode: context.attributes.mode,
-                            size: SpikeConstants.compactSize)
+                            size: size)
     }
 }
 
@@ -58,7 +59,7 @@ struct LockScreenView: View {
         HStack(spacing: 12) {
             RunnerSprite(tier: context.state.speedTier, anchor: context.state.anchor,
                          art: context.attributes.art, mode: context.attributes.mode,
-                         size: SpikeConstants.compactSize)
+                         size: SpikeConstants.largeSize)
             VStack(alignment: .leading, spacing: 2) {
                 Text("아일랜드 러너 스파이크")
                     .font(.system(size: 15, weight: .semibold))

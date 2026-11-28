@@ -72,4 +72,54 @@ final class FrameScheduleTests: XCTestCase {
         XCTAssertEqual(FrameSchedule.plan(tier: -5).tier, 0)
         XCTAssertEqual(FrameSchedule.plan(tier: 99).tier, 3)
     }
+
+    // MARK: ArtSet (그림 파일 이름)
+
+    func testCharacterArtsReturnAllNamesForBothSizes() {
+        for (art, prefix) in ArtSet.characterPrefix {
+            for large in [false, true] {
+                let suffix = large ? "_L" : ""
+                for tier in 0..<FrameSchedule.tiers.count {
+                    let set = ArtSet.forTier(tier, art: art, large: large)
+                    XCTAssertNil(set.base, "\(art) 는 통그림이라 바탕이 없다")
+                    XCTAssertEqual(set.still, "\(prefix)_still\(suffix)")
+                    if FrameSchedule.plan(tier: tier).frameCount == 2 {
+                        XCTAssertEqual(set.frames, ["\(prefix)_rest_1\(suffix)", "\(prefix)_rest_2\(suffix)"])
+                    } else {
+                        XCTAssertEqual(set.frames, (1...4).map { "\(prefix)_run_\($0)\(suffix)" })
+                    }
+                }
+            }
+            // run 4 + rest 2 + still 1 = 7장, 큰 것까지 14장
+            let all = ArtSet.requiredNames(art: art)
+            XCTAssertEqual(all.count, 14, art)
+            XCTAssertTrue(all.contains("\(prefix)_run_4_L"))
+            XCTAssertTrue(all.contains("\(prefix)_rest_2"))
+        }
+    }
+
+    func testEveryArtHasNonEmptyUniqueFrames() {
+        for art in ArtSet.allArts {
+            for large in [false, true] {
+                for tier in 0..<FrameSchedule.tiers.count {
+                    let set = ArtSet.forTier(tier, art: art, large: large)
+                    let n = FrameSchedule.plan(tier: tier).frameCount
+                    XCTAssertEqual(set.frames.count, n, "\(art) 단계 \(tier)")
+                    XCTAssertFalse(set.still.isEmpty)
+                    // shape 의 쉼 2장은 shape_1, shape_3 (서로 달라야 호흡이 보인다)
+                    XCTAssertEqual(Set(set.frames).count, n, "\(art) 단계 \(tier) 장 이름 중복")
+                }
+            }
+        }
+        XCTAssertEqual(ArtSet.allArts.first, ArtSet.defaultArt)
+        XCTAssertEqual(ArtSet.defaultArt, "hamster2")
+    }
+
+    func testLegacyArtsKeepTheirFiles() {
+        XCTAssertEqual(ArtSet.forTier(2, art: "hamster").base, "hamsterold_bg")
+        XCTAssertEqual(ArtSet.forTier(0, art: "hamster").frames, ["hamsterold_rest_1", "hamsterold_rest_2"])
+        XCTAssertEqual(ArtSet.forTier(2, art: "shape", large: true).frames, ["shape_1", "shape_2", "shape_3", "shape_4"])
+        // 모르는 값은 shape 로
+        XCTAssertEqual(ArtSet.forTier(1, art: "없는그림").still, "shape_1")
+    }
 }
