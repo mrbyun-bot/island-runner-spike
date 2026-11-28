@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="200" height="120" viewBox="0 0 200 120">
+<defs>
+<inkscape:path-effect effect="powerstroke" id="ps1" is_visible="true" lpeversion="1" offset_points="0.2,1 | 1.5,7 | 2.8,1" sort_points="true" interpolator_type="CentripetalCatmullRom" interpolator_beta="0.2" start_linecap_type="round" linejoin_type="round" miter_limit="4" end_linecap_type="round" scale_width="1" not_jump="false"/>
+<inkscape:path-effect effect="taper_stroke" id="ts1" is_visible="true" lpeversion="1" stroke_width="8" attach_start="0.3" end_offset="0.3" smoothing="0.5" jointype="round" miter_limit="4"/>
+</defs>
+<rect width="200" height="120" fill="#fff"/>
+<path inkscape:path-effect="#ps1" inkscape:original-d="M 20,60 C 50,10 90,10 100,50 C 110,90 150,100 180,40" d="M 20,60" fill="#7a3b2e" stroke="none"/>
+<path inkscape:path-effect="#ts1" inkscape:original-d="M 20,100 C 60,80 140,120 180,95" d="M 20,100" fill="#2e4a7a" stroke="none"/>
+</svg>
