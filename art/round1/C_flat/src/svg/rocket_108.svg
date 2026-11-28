@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108"><defs><mask id="m_rocket_fin_t_sh" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><path d="M33 40 L27 28 C36 26 45 31 49 40 Z" fill="#fff"/><path d="M33 40 L27 28 C36 26 45 31 49 40 Z" fill="#000" transform="translate(-2.6 -3.0)"/></mask><mask id="m_rocket_fin_b_sh" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><path d="M33 68 L27 80 C36 82 45 77 49 68 Z" fill="#fff"/><path d="M33 68 L27 80 C36 82 45 77 49 68 Z" fill="#000" transform="translate(-2.6 -3.0)"/></mask><mask id="m_rocket_body_sh" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><path d="M28 44 C28 40 31 38 35 38 L66 38 C80 39 93 46 97 54 C93 62 80 69 66 70 L35 70 C31 70 28 68 28 64 Z" fill="#fff"/><path d="M28 44 C28 40 31 38 35 38 L66 38 C80 39 93 46 97 54 C93 62 80 69 66 70 L35 70 C31 70 28 68 28 64 Z" fill="#000" transform="translate(-2.6 -3.0)"/></mask><mask id="m_rocket_nose_sh" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><path d="M74 39.2 C84 41.5 93 47 97 54 C93 61 84 66.5 74 68.8 C77 60 77 48 74 39.2 Z" fill="#fff"/><path d="M74 39.2 C84 41.5 93 47 97 54 C93 61 84 66.5 74 68.8 C77 60 77 48 74 39.2 Z" fill="#000" transform="translate(-2.6 -3.0)"/></mask></defs><g id="flame_o"><path d="M27 46 C18 39 9 44 5 54 C9 64 18 69 27 62 Z" fill="#FF9F0A"/></g>
+<g id="flame_i"><path d="M27 49 C21 46 15 49 13 54 C15 59 21 62 27 59 Z" fill="#FFD66B"/></g>
+<g id="fin_t"><path d="M33 40 L27 28 C36 26 45 31 49 40 Z" fill="#7BE0C3"/><g mask="url(#m_rocket_fin_t_sh)"><path d="M33 40 L27 28 C36 26 45 31 49 40 Z" fill="#4FBFA0"/></g></g>
+<g id="fin_b"><path d="M33 68 L27 80 C36 82 45 77 49 68 Z" fill="#7BE0C3"/><g mask="url(#m_rocket_fin_b_sh)"><path d="M33 68 L27 80 C36 82 45 77 49 68 Z" fill="#4FBFA0"/></g></g>
+<g id="body"><path d="M28 44 C28 40 31 38 35 38 L66 38 C80 39 93 46 97 54 C93 62 80 69 66 70 L35 70 C31 70 28 68 28 64 Z" fill="#F7F3FF"/><g mask="url(#m_rocket_body_sh)"><path d="M28 44 C28 40 31 38 35 38 L66 38 C80 39 93 46 97 54 C93 62 80 69 66 70 L35 70 C31 70 28 68 28 64 Z" fill="#DCD3F5"/></g></g>
+<g id="nose"><path d="M74 39.2 C84 41.5 93 47 97 54 C93 61 84 66.5 74 68.8 C77 60 77 48 74 39.2 Z" fill="#FF8FB1"/><g mask="url(#m_rocket_nose_sh)"><path d="M74 39.2 C84 41.5 93 47 97 54 C93 61 84 66.5 74 68.8 C77 60 77 48 74 39.2 Z" fill="#E8708F"/></g></g>
+<g id="face"><ellipse cx="44.5" cy="60.5" rx="3.4" ry="2.2" fill="#FF8FA3" opacity="0.8"/>
+<ellipse cx="69.5" cy="60.5" rx="3.4" ry="2.2" fill="#FF8FA3" opacity="0.8"/>
+<ellipse cx="50" cy="54" rx="3.86" ry="4.2" fill="#2B1E16"/>
+<circle cx="48.49" cy="52.32" r="1.60" fill="#fff"/>
+<circle cx="51.43" cy="55.60" r="0.67" fill="#fff" opacity=".9"/>
+<ellipse cx="64" cy="54" rx="3.86" ry="4.2" fill="#2B1E16"/>
+<circle cx="62.49" cy="52.32" r="1.60" fill="#fff"/>
+<circle cx="65.43" cy="55.60" r="0.67" fill="#fff" opacity=".9"/>
+<path d="M54.5 60 Q57 63 59.5 60" fill="none" stroke="#2B1E16" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
