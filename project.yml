@@ -38,9 +38,12 @@ targets:
         buildPhase: resources
       - path: Assets/frames
         excludes:
-          - "src/**"
-          - "*.gif"
-          - "preview-*.png"
+          - "**/src/**"
+          - "**/preview/**"
+          - "**/*.gif"
+          - "**/preview-*.png"
+          - "**/*.md"
+          - "**/*.py"
         buildPhase: resources
     info:
       path: Generated/SpikeApp-Info.plist
@@ -81,9 +84,12 @@ targets:
         buildPhase: resources
       - path: Assets/frames
         excludes:
-          - "src/**"
-          - "*.gif"
-          - "preview-*.png"
+          - "**/src/**"
+          - "**/preview/**"
+          - "**/*.gif"
+          - "**/preview-*.png"
+          - "**/*.md"
+          - "**/*.py"
         buildPhase: resources
     info:
       path: Generated/RunnerLiveActivity-Info.plist
