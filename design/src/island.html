@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>확장 아일랜드</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  .wall { position: absolute; inset: 0; background: #23272B; }
+  .apps { position: absolute; left: 26px; right: 26px; top: 210px; display: grid; grid-template-columns: repeat(4, 64px); justify-content: space-between; row-gap: 30px; opacity: .35; }
+  .apps i { display: block; width: 64px; height: 64px; border-radius: 15px; background: #5B6066; }
+  .blur { position: absolute; inset: 0; background: rgba(0,0,0,.35); }
+  .xi { position: absolute; z-index: 6; top: 11px; left: 11px; width: 380px; height: 160px; border-radius: 46px; background: #000; color: #F4F1EA; }
+  .xi .lead { position: absolute; left: 20px; top: 14px; }
+  .xi .lead .ph { width: 80px; height: 80px; }
+  .xi .trail { position: absolute; right: 22px; top: 16px; text-align: right; }
+  .xi .trail .label { color: #8A867F; }
+  .xi .trail .big { font: 600 34px/38px var(--font); color: #FF9F0A; font-variant-numeric: tabular-nums; }
+  .xi .center { position: absolute; left: 116px; top: 56px; font: var(--t-sub-strong); color: #F4F1EA; }
+  .xi .center span { color: #A39F97; font-weight: 400; }
+  .xi .bottom { position: absolute; left: 20px; right: 22px; bottom: 16px; }
+  .xi .tiers { display: grid; grid-template-columns: 10fr 40fr 30fr 20fr; gap: 2px; height: 4px; }
+  .xi .tiers i { background: #2A2A2A; display: block; }
+  .xi .tiers i.on { background: #FF9F0A; }
+  .xi .facts { display: flex; justify-content: space-between; margin-top: 8px; font: var(--t-foot); color: #A39F97; font-variant-numeric: tabular-nums; }
+  .xi .facts b { color: #F4F1EA; font-weight: 600; }
+  .callout { position: absolute; z-index: 7; left: 16px; right: 16px; top: 196px; font: var(--t-foot); color: #C9C5BD; }
+  .callout b { color: #F4F1EA; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="wall"></div>
+  <div class="blur"></div>
+
+  <section class="xi" aria-label="러너, CPU 42퍼센트, 보통 속도">
+    <div class="lead"><div class="ph" role="img" aria-label="햄스터"><div class="glyph"><i></i></div><div class="tag">80pt</div></div></div>
+    <div class="trail"><div class="label">CPU</div><div class="big">42%</div></div>
+    <div class="center">보통 <span>· 한 바퀴 1초</span></div>
+    <div class="bottom">
+      <div class="tiers" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></div>
+      <div class="facts"><span>메모리 <b>64%</b></span><span>배터리 <b>78%</b></span><span>5시간 48분 남음</span></div>
+    </div>
+  </section>
+
+  <div class="callout">길게 눌렀을 때(확장). 폭 380pt는 표의 393→371, 430→408 차이(22pt)로 추정한 값, 높이는 HIG 범위 84~160pt 중 160pt. 배경은 시스템이 정하는 불투명 검정.</div>
+  <div class="homeind" style="background:#F4F1EA"></div>
+</div>
+<script src="mock.js"></script>
+</body>
+</html>

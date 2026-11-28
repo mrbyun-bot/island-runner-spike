@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>설정</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  .radio { width: 22px; flex: none; color: var(--accent-text); }
+  .row a, a.row { color: inherit; text-decoration: none; }
+  .group .row .t { font: var(--t-body); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="status">
+    <div class="time num">9:41</div>
+    <div class="island compact"><div class="ph sm"><div class="glyph"><i></i></div></div><span class="v">42%</span></div>
+    <div class="sys"><i data-icon="signal" data-size="18"></i><i data-icon="wifi" data-size="18"></i><i data-icon="battery" data-size="26" data-w="1.4"></i></div>
+  </div>
+  <div class="scroll">
+    <div class="nav"><h1>설정</h1></div>
+
+    <div class="ghead">위젯·잠금 화면이 따르는 값</div>
+    <div class="group" role="radiogroup" aria-label="위젯과 잠금 화면 기준 값">
+      <div class="row" role="radio" aria-checked="true">
+        <div class="grow"><div class="t">배터리 잔량</div><div class="d">늘 최신 값. 잔량이 줄면 천천히 달림</div></div>
+        <span class="radio"><i data-icon="check" data-size="20" data-w="2.4"></i></span>
+      </div>
+      <div class="row" role="radio" aria-checked="false">
+        <div class="grow"><div class="t">마지막으로 잰 CPU</div><div class="d">앱을 열어 둔 때의 값. 잰 시각을 함께 표시</div></div>
+        <span class="radio"></span>
+      </div>
+    </div>
+    <div class="gfoot">앱이 꺼져 있으면 iOS가 CPU를 계속 재지 못하게 합니다. 앱 안에서는 항상 실시간 CPU로 달립니다.</div>
+
+    <div class="ghead">다이내믹 아일랜드</div>
+    <div class="group">
+      <div class="row">
+        <div class="grow"><div class="t">끝나기 전에 알림</div></div>
+        <span class="toggle" role="switch" aria-checked="true" aria-label="끝나기 전에 알림"></span>
+      </div>
+      <a class="row" href="#">
+        <div class="grow"><div class="t">움직임 줄이기</div></div>
+        <span class="val">iOS 설정 따름</span><span class="chev"><i data-icon="chev" data-size="16"></i></span>
+      </a>
+    </div>
+    <div class="gfoot">iOS는 아일랜드를 최대 8시간 띄웁니다. 끝나기 10분 전 알림을 누르면 다시 켜집니다.</div>
+
+    <div class="ghead">구매</div>
+    <div class="group">
+      <a class="row" href="#"><div class="grow"><div class="t" style="color:var(--accent-text)">구매 복원</div></div></a>
+    </div>
+
+    <div class="ghead">정보</div>
+    <div class="group">
+      <a class="row" href="#"><div class="grow"><div class="t">개인정보 처리방침</div></div><span class="chev"><i data-icon="ext" data-size="16"></i></span></a>
+      <a class="row" href="#"><div class="grow"><div class="t">이용약관</div></div><span class="chev"><i data-icon="ext" data-size="16"></i></span></a>
+      <a class="row" href="#"><div class="grow"><div class="t">문의하기</div></div><span class="chev"><i data-icon="chev" data-size="16"></i></span></a>
+      <div class="row"><div class="grow"><div class="t">버전</div></div><span class="val num">0.1 (1)</span></div>
+    </div>
+  </div>
+  <nav class="tabbar" aria-label="탭">
+    <a href="#"><i data-icon="gauge" data-size="24"></i>러너</a>
+    <a href="#"><i data-icon="grid" data-size="24"></i>캐릭터</a>
+    <a class="on" href="#"><i data-icon="gear" data-size="24"></i>설정</a>
+  </nav>
+  <div class="homeind"></div>
+</div>
+<script src="mock.js"></script>
+</body>
+</html>

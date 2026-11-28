@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>팩 시트</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  iframe { position: absolute; inset: 0; width: 402px; height: 874px; border: 0; }
+  .sh-head { display: flex; justify-content: space-between; align-items: flex-start; padding: 14px var(--margin) 0 20px; }
+  .sh-head h2 { margin: 0; font: var(--t-title2); }
+  .sh-head .sub { font: var(--t-foot); color: var(--text-2); margin-top: 4px; }
+  .close { width: 44px; height: 44px; border-radius: 22px; background: var(--surface-2); border: 0; color: var(--text-2); display: flex; align-items: center; justify-content: center; font: 600 17px/1 var(--font); }
+  .strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; padding: 18px var(--margin) 0 20px; }
+  .strip .c { text-align: left; }
+  .strip .ph { width: 100%; aspect-ratio: 1; border-radius: 10px; }
+  .strip .n { font: var(--t-cap); color: var(--text-2); margin-top: 5px; }
+  .facts { margin: 18px var(--margin) 0 20px; border-top: var(--line) solid var(--hairline); }
+  .facts div { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: var(--line) solid var(--hairline); font: var(--t-sub); }
+  .facts span:last-child { color: var(--text-2); }
+  .buy { padding: 18px var(--margin) 0 20px; display: flex; flex-direction: column; gap: 8px; }
+  .buy .btn { width: 100%; }
+  .buy .note { font: var(--t-foot); color: var(--text-2); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <iframe src="characters.html" title="캐릭터 화면" aria-hidden="true"></iframe>
+  <div class="dim"></div>
+  <section class="sheet" role="dialog" aria-label="동물 팩">
+    <div class="grabber" aria-label="시트 크기 조절"></div>
+    <div class="sh-head">
+      <div><h2>동물 팩</h2><div class="sub">6종 · 한 번 사면 계속 사용</div></div>
+      <button class="close" aria-label="닫기"><i data-icon="xmark" data-size="16" data-w="2.4"></i></button>
+    </div>
+    <div class="strip">
+      <div class="c"><div class="ph sm"><div class="glyph"><i></i></div></div><div class="n">강아지</div></div>
+      <div class="c"><div class="ph sm"><div class="glyph"><i></i></div></div><div class="n">토끼</div></div>
+      <div class="c"><div class="ph sm"><div class="glyph"><i></i></div></div><div class="n">거북이</div></div>
+      <div class="c"><div class="ph sm"><div class="glyph"><i></i></div></div><div class="n">오리</div></div>
+      <div class="c"><div class="ph sm"><div class="glyph"><i></i></div></div><div class="n">다람쥐</div></div>
+      <div class="c"><div class="ph sm"><div class="glyph"><i></i></div></div><div class="n">판다</div></div>
+    </div>
+    <div class="facts">
+      <div><span>아일랜드·잠금 화면·위젯</span><span>모두 사용</span></div>
+      <div><span>쉼·보통·빠름 동작</span><span>캐릭터마다 따로</span></div>
+      <div><span>가족 공유</span><span>[미정]</span></div>
+    </div>
+    <div class="buy">
+      <button class="btn disabled" aria-disabled="true">구매는 다음 업데이트부터</button>
+      <div class="note">지금은 캐릭터를 눌러 움직임만 미리 볼 수 있습니다. 가격은 1,100원으로 잡아 두었고 출시 전에 정합니다.</div>
+    </div>
+  </section>
+  <div class="homeind" style="z-index:10"></div>
+</div>
+<script src="mock.js"></script>
+</body>
+</html>

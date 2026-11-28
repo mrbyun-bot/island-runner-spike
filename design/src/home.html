@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>홈</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  .hero { display: flex; gap: 16px; padding: 16px var(--margin) 0; }
+  .hero .ph { width: 132px; height: 132px; }
+  .hero .side { flex: 1; display: flex; flex-direction: column; padding-top: 6px; }
+  .hero .tier { font: var(--t-sub-strong); color: #F4F1EA; margin-top: 10px; }
+  .hero .tier span { color: #A39F97; font-weight: 400; }
+  .hero .label { color: #8A867F; }
+  .spark { padding: 14px var(--margin) 10px; }
+  .spark .axis { display: flex; justify-content: space-between; font: var(--t-cap2); color: #8A867F; margin-top: 4px; }
+  .la { margin: 0 var(--margin); background: var(--surface); border-radius: var(--r-group); }
+  .la .row { padding: 12px 12px 12px 16px; }
+  .dot { width: 8px; height: 8px; border-radius: 4px; background: #FF9F0A; flex: none; margin-top: 7px; align-self: flex-start; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="status">
+    <div class="time num">9:41</div>
+    <div class="island compact"><div class="ph sm"><div class="glyph"><i></i></div></div><span class="v">42%</span></div>
+    <div class="sys"><i data-icon="signal" data-size="18"></i><i data-icon="wifi" data-size="18"></i><i data-icon="battery" data-size="26" data-w="1.4"></i></div>
+  </div>
+
+  <div class="scroll">
+    <div class="nav"><h1>러너</h1></div>
+
+    <section class="stage" aria-label="현재 캐릭터와 CPU">
+      <div class="hero">
+        <div class="ph" role="img" aria-label="햄스터, 보통 속도로 달리는 중"><div class="glyph"><i></i></div><div class="tag">햄스터 · 80pt 자리</div></div>
+        <div class="side">
+          <div class="label">기기 전체 CPU</div>
+          <div class="readout num">42<small>%</small></div>
+          <div class="tier">보통 <span>· 한 바퀴 1초</span></div>
+        </div>
+      </div>
+      <div class="spark" aria-label="최근 60초 CPU 그래프">
+        <svg id="spark" width="370" height="44" viewBox="0 0 370 44" aria-hidden="true"></svg>
+        <div class="axis"><span>60초 전</span><span>지금</span></div>
+      </div>
+    </section>
+
+    <div class="meters">
+      <div class="meter">
+        <div class="label">CPU</div>
+        <div class="v num" style="color:var(--accent-text)">42<small>%</small></div>
+        <div class="bar"><b style="width:42%;background:#FF9F0A"></b></div>
+      </div>
+      <div class="meter">
+        <div class="label">메모리</div>
+        <div class="v num">5.1<small>/ 8GB</small></div>
+        <div class="bar"><b style="width:64%;background:var(--mem)"></b></div>
+      </div>
+      <div class="meter">
+        <div class="label">배터리</div>
+        <div class="v num">78<small>%</small></div>
+        <div class="bar"><b style="width:78%;background:var(--bat)"></b></div>
+      </div>
+    </div>
+
+    <div class="sect"><h2>속도 단계</h2><span class="meta">CPU 값으로 정해짐</span></div>
+    <div class="ruler" aria-label="속도 단계: 보통">
+      <div class="track">
+        <div class="seg">쉼</div><div class="seg on">보통</div><div class="seg">빠름</div><div class="seg">최고</div>
+        <div class="marker" style="left:calc(42% - 1px)"></div>
+      </div>
+      <div class="scale num"><span>0</span><span>10%</span><span>50%</span><span>80%</span></div>
+    </div>
+
+    <div class="sect"><h2>다이내믹 아일랜드</h2></div>
+    <div class="la">
+      <div class="row">
+        <span class="dot"></span>
+        <div class="grow">
+          <div class="t">달리는 중</div>
+          <div class="d num">잠금 화면에도 보임 · 5시간 48분 남음</div>
+        </div>
+        <button class="btn bordered sm" aria-label="다이내믹 아일랜드 중지"><i data-icon="stop" data-size="14"></i>중지</button>
+      </div>
+    </div>
+    <p class="gfoot" style="padding:8px calc(var(--margin) + 16px) 0">iOS는 8시간이 지나면 아일랜드를 내립니다. 끝나기 10분 전에 알림을 드리니 눌러서 다시 켜 주세요.</p>
+    <a class="row" href="#" style="margin:12px var(--margin) 0;padding:12px 12px 12px 16px;background:var(--surface);border-radius:var(--r-group);color:inherit;text-decoration:none">
+      <div class="grow"><div class="t" style="font:var(--t-sub-strong)">위젯·잠금 화면 기준</div><div class="d">앱을 닫으면 배터리 잔량으로 달림</div></div>
+      <span class="val" style="font:var(--t-sub)">배터리</span><span class="chev"><i data-icon="chev" data-size="16"></i></span>
+    </a>
+  </div>
+
+  <nav class="tabbar" aria-label="탭">
+    <a class="on" href="#"><i data-icon="gauge" data-size="24"></i>러너</a>
+    <a href="#"><i data-icon="grid" data-size="24"></i>캐릭터</a>
+    <a href="#"><i data-icon="gear" data-size="24"></i>설정</a>
+  </nav>
+  <div class="homeind"></div>
+</div>
+<script src="mock.js"></script>
+<script>
+  // 최근 60초 CPU (보기용 고정값)
+  var v=[18,22,25,21,30,34,29,27,33,38,41,36,32,35,44,52,48,40,37,39,43,47,45,41,38,36,40,46,51,55,49,44,42,39,35,33,37,41,45,48,44,40,38,42,47,50,46,43,41,39,40,43,45,44,41,40,42,44,43,42];
+  var s=document.getElementById('spark'), W=370, H=44;
+  var pts=v.map(function(y,i){return (i*(W/(v.length-1))).toFixed(1)+','+(H-2-(y/100)*(H-4)).toFixed(1)}).join(' ');
+  var grid='';[0.25,0.5,0.75].forEach(function(g){grid+='<line x1="0" x2="'+W+'" y1="'+(H-2-g*(H-4))+'" y2="'+(H-2-g*(H-4))+'" stroke="#262626" stroke-width="0.5"/>'});
+  s.innerHTML=grid+'<polyline points="'+pts+'" fill="none" stroke="#FF9F0A" stroke-width="1.5" stroke-linejoin="round"/><circle cx="'+W+'" cy="'+(H-2-0.42*(H-4))+'" r="2.5" fill="#FF9F0A"/>';
+</script>
+</body>
+</html>

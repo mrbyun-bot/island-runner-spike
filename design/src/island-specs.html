@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>아일랜드 모양별 배치</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  body { background: #111; }
+  .board { width: 900px; height: 560px; padding: 28px 32px; box-sizing: border-box; background: #111; color: #F4F1EA; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; align-content: start; }
+  h1 { grid-column: 1 / -1; margin: 0; font: var(--t-title2); }
+  h1 small { display: block; font: var(--t-foot); color: #A39F97; margin-top: 4px; font-weight: 400; }
+  .spec h2 { margin: 0 0 4px; font: var(--t-headline); }
+  .spec p { margin: 0 0 12px; font: var(--t-foot); color: #A39F97; }
+  .row2 { display: flex; align-items: center; gap: 16px; }
+  .pill { background: #000; height: 37px; border-radius: 19px; display: flex; align-items: center; justify-content: space-between; outline: 1px solid #333; }
+  .cam { width: 126px; height: 37px; position: relative; }
+  .cam::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 6px; background: #151A22; }
+  .lead, .trail { width: 52px; height: 37px; display: flex; align-items: center; justify-content: center; }
+  .lead .ph { width: 30px; height: 30px; }
+  .trail { font: 600 15px/18px var(--font); color: #FF9F0A; font-variant-numeric: tabular-nums; }
+  .min { width: 37px; height: 37px; border-radius: 19px; background: #000; outline: 1px solid #333; display: flex; align-items: center; justify-content: center; }
+  .min .ph { width: 28px; height: 28px; }
+  .lim { width: 28px; height: 28px; border-radius: 14px; background: #000; outline: 1px dashed #FF9F0A; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .lim .ph { width: 24px; height: 24px; }
+  .dm { font: var(--t-cap); color: #8A867F; }
+  .regions { position: relative; width: 380px; height: 160px; border-radius: 46px; background: #000; outline: 1px solid #333; }
+  .regions div { position: absolute; border: 1px dashed #4A4640; border-radius: 6px; font: var(--t-cap2); color: #8A867F; padding: 4px; box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div class="board">
+  <h1>아일랜드 모양별 배치 (1:1, pt)<small>값 출처: HIG Live Activities 명세 표(393pt 기종: compact 52.33×36.67, minimal 36.67~45×36.67, expanded 371×84~160, 좁은 폭 28×28). 402pt 기종 값은 표에 없어 추정.</small></h1>
+
+  <section class="spec">
+    <h2>축소(compact)</h2>
+    <p>왼쪽은 캐릭터, 오른쪽은 따르는 값. 카메라에 붙인다(사이 여백 없음).</p>
+    <div class="pill" style="width:230px"><div class="lead"><div class="ph sm"><div class="glyph"><i></i></div></div></div><div class="cam"></div><div class="trail">42%</div></div>
+    <p style="margin-top:8px">왼쪽 칸 36pt 정사각, 보이는 높이 약 26pt. 오른쪽은 숫자만, 단위 %까지 4글자 이하.</p>
+  </section>
+
+  <section class="spec">
+    <h2>최소(minimal) · 좁은 폭(28pt 원)</h2>
+    <p>다른 Live Activity 와 같이 떠 있을 때와 가로 모드. 캐릭터만 남긴다.</p>
+    <div class="row2"><div class="min"><div class="ph sm"><div class="glyph"><i></i></div></div></div><span class="dm">minimal 36.67pt</span>
+      <div class="lim"><div class="ph sm"><div class="glyph"><i></i></div></div></div><span class="dm">limited 28pt 원 안</span></div>
+    <p style="margin-top:8px">숫자는 빼고, 캐릭터 속도로만 부하를 보인다. 28pt 에서는 쉼/달림 두 장만 써도 된다(그래픽 디자이너 확인 필요).</p>
+  </section>
+
+  <section class="spec" style="grid-column:1 / -1">
+    <h2>확장(expanded) 영역 나눔</h2>
+    <p>ActivityKit 영역 이름 그대로. 축소에서 왼쪽에 있던 캐릭터는 확장에서도 왼쪽, 오른쪽 숫자는 오른쪽(HIG: 요소의 상대 위치 유지).</p>
+    <div class="row2" style="align-items:flex-start">
+      <div class="regions">
+        <div style="left:20px;top:14px;width:80px;height:80px">leading<br>캐릭터 80</div>
+        <div style="right:22px;top:16px;width:96px;height:56px;text-align:right">trailing<br>CPU 42%</div>
+        <div style="left:116px;top:52px;width:130px;height:30px">center<br></div>
+        <div style="left:20px;right:22px;bottom:12px;height:40px">bottom: 단계 띠 4pt + 메모리·배터리·남은 시간</div>
+      </div>
+      <p style="width:380px;margin:0">여백: 좌 20, 우 22, 위 14, 아래 12. 둥근 모서리 가까이 둔 캐릭터 칸은 ContainerRelativeShape 로 바깥 모서리와 같은 곡률(HIG: concentric). 글자는 Footnote 13 이상. 움직임은 캐릭터 프레임 교체와 숫자 numericText 전환만, 다른 애니메이션 없음(HIG: 2초 이하). 키라인 색은 #FF9F0A 30%.</p>
+    </div>
+  </section>
+</div>
+<script src="mock.js"></script>
+</body>
+</html>

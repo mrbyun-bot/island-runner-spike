@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>홈 화면 위젯</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  body { background: #111; }
+  .board { width: 900px; height: 420px; padding: 28px 32px; box-sizing: border-box; color: #F4F1EA; }
+  h1 { margin: 0 0 4px; font: var(--t-title2); }
+  .sub { font: var(--t-foot); color: #A39F97; margin-bottom: 22px; }
+  .wall { display: flex; gap: 22px; align-items: flex-start; padding: 22px; background: #34424A; border-radius: 20px; width: max-content; }
+  .w { background: #000; border-radius: 22px; padding: 14px; box-sizing: border-box; position: relative; color: #F4F1EA; }
+  .w.s { width: 158px; height: 158px; display: flex; flex-direction: column; justify-content: space-between; }
+  .w.s .ph { width: 64px; height: 64px; }
+  .w .big { font: 600 28px/30px var(--font); color: #30D158; font-variant-numeric: tabular-nums; }
+  .w .cap { font: var(--t-cap); color: #A39F97; }
+  .w.m { width: 338px; height: 158px; display: flex; gap: 14px; }
+  .w.m .ph { width: 96px; height: 96px; }
+  .w.m .col { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .w.m .rows div { display: flex; justify-content: space-between; font: var(--t-foot); color: #A39F97; padding: 3px 0; border-top: 0.5px solid #2A2A2A; font-variant-numeric: tabular-nums; }
+  .w.m .rows b { color: #F4F1EA; font-weight: 600; }
+  .lbl { font: var(--t-cap); color: #DAD6CE; margin-top: 6px; }
+  .notes { margin-top: 18px; font: var(--t-foot); color: #A39F97; max-width: 820px; }
+</style>
+</head>
+<body>
+<div class="board">
+  <h1>홈 화면 위젯 (선택)</h1>
+  <div class="sub">크기는 HIG 위젯 표의 393pt 기종 값(소 158, 중 338×158). 402pt 기종 값은 표에 없어 확인 못 함. 배경은 검정 무대와 같은 #000.</div>
+  <div class="wall">
+    <div>
+      <div class="w s" aria-label="러너, 배터리 78퍼센트">
+        <div class="ph sm" role="img" aria-label="햄스터"><div class="glyph"><i></i></div></div>
+        <div><div class="big">78%</div><div class="cap num">배터리 · 9:38</div></div>
+      </div>
+      <div class="lbl">소</div>
+    </div>
+    <div>
+      <div class="w m" aria-label="러너, 배터리 78퍼센트, 빠름">
+        <div class="ph" role="img" aria-label="햄스터"><div class="glyph"><i></i></div><div class="tag">96pt</div></div>
+        <div class="col">
+          <div><div class="cap">배터리 기준 · 빠름</div><div class="big">78%</div></div>
+          <div class="rows"><div><span>CPU(마지막 측정)</span><b>42% · 9:38</b></div><div><span>메모리</span><b>64%</b></div></div>
+        </div>
+      </div>
+      <div class="lbl">중</div>
+    </div>
+  </div>
+  <div class="notes">위젯은 iOS 갱신 예산 안에서만 다시 그려지므로 캐릭터는 정지 포즈(still) 한 장이다. 달리는 모습은 아일랜드와 잠금 화면 Live Activity, 앱 안에서만 보인다. 이 점을 위젯 갤러리 설명에 한 줄로 쓴다: "배터리 잔량을 보여 줍니다. 달리는 모습은 다이내믹 아일랜드에서."</div>
+</div>
+<script src="mock.js"></script>
+</body>
+</html>
