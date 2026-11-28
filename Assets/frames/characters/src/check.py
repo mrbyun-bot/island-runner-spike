@@ -3,8 +3,9 @@
 2) preview/preview_<char>.png : 검정 바탕, 36px 실제 크기 줄 + 아일랜드에서 보이는 띠 줄 + 108px 1:1 줄 + 240px 줄
 3) preview/loop_<char>.gif    : 8fps 달리기 루프(240px·108px·36px 나란히)
 4) ImageMagick compare 로 프레임 간 픽셀 차이 표(preview/frame_diff.md)
+5) preview/before_after.png : 1라운드(커밋 58e21ce) 대비 2라운드, 검정 바탕 36px 실제 크기 줄 + 108px 1:1 줄
 """
-import os, subprocess, glob
+import os, subprocess, glob, tempfile
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -124,12 +125,58 @@ def diff_table():
     return lines
 
 
+# 5) 전/후 비교판
+ROUND1 = "58e21ce"   # 1라운드 그림이 마지막으로 있던 커밋
+
+
+def round1_dir():
+    tmp = tempfile.mkdtemp(prefix="round1_")
+    top = sh("git", "-C", D, "rev-parse", "--show-toplevel").strip()
+    rel = os.path.relpath(D, top)
+    for c in CHARS:
+        for f in ("still", "run_1", "run_2", "run_3", "run_4"):
+            name = f"{c}_{f}@3x.png"
+            data = subprocess.run(["git", "-C", top, "show", f"{ROUND1}:{rel}/{name}"], capture_output=True, check=True).stdout
+            open(os.path.join(tmp, name), "wb").write(data)
+    return tmp
+
+
+def before_after():
+    font = ImageFont.truetype(FONT, 16)
+    small = ImageFont.truetype(FONT, 12)
+    fr = ["still", "run_1", "run_2", "run_3", "run_4"]
+    lab = ["정지", "달1", "달2", "달3", "달4"]
+    pad, gap, cgap = 16, 8, 28
+    cw = 5 * 108 + 4 * gap
+    W = pad * 2 + 3 * cw + 2 * cgap
+    sec = 26 + (36 + 22) + (108 + 16)
+    H = 44 + 2 * sec + 30
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    dr = ImageDraw.Draw(img)
+    dr.text((pad, 14), "1라운드(전) / 2라운드(후)  ·  검정 바탕. 각 칸 위 줄 = 36px 실제 크기, 아래 줄 = 108px(아이폰 물리 픽셀 1:1). 정지와 달리기 4장", font=font, fill=(205, 205, 205, 255))
+    y = 44
+    for title, src in (("1라운드 (11/28 오전, 커밋 58e21ce)", round1_dir()), ("2라운드 (색·눈 공식, 달리기 다시)", D)):
+        dr.text((pad, y), title, font=font, fill=(255, 159, 10, 255))
+        y += 26
+        for ci, c in enumerate(CHARS):
+            x0 = pad + ci * (cw + cgap)
+            for k, f in enumerate(fr):
+                im = Image.open(os.path.join(src, f"{c}_{f}@3x.png")).convert("RGBA")
+                x = x0 + k * (108 + gap)
+                img.alpha_composite(on_black(im, 36), (x + 36, y))
+                dr.text((x + 36, y + 39), lab[k], font=small, fill=(140, 140, 140, 255))
+                img.alpha_composite(on_black(im), (x, y + 36 + 22))
+        y += sec - 26
+    img.convert("RGB").save(os.path.join(PV, "before_after.png"), optimize=True)
+
+
 if __name__ == "__main__":
     bad, rows = check_files()
     print(f"파일 검사: 42장 중 실패 {bad}")
     for c in CHARS:
         preview(c)
         loop_gif(c)
+    before_after()
     t = diff_table()
     print("\n".join(t))
     with open(os.path.join(PV, "frame_diff.md"), "w") as f:
