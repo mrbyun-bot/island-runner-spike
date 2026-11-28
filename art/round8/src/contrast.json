@@ -1,0 +1,107 @@
+{
+ "eye": "#1D1821",
+ "contrast": {
+  "dog": {
+   "body_vs_black": 11.7,
+   "eye_vs_body": 9.7
+  },
+  "rabbit": {
+   "body_vs_black": 12.3,
+   "eye_vs_body": 10.2
+  },
+  "turtle": {
+   "body_vs_black": 14.1,
+   "eye_vs_body": 11.7
+  },
+  "duck": {
+   "body_vs_black": 16.4,
+   "eye_vs_body": 13.6
+  },
+  "squirrel": {
+   "body_vs_black": 9.8,
+   "eye_vs_body": 8.1
+  },
+  "train": {
+   "body_vs_black": 12.8,
+   "eye_vs_body": 10.7
+  },
+  "bike": {
+   "body_vs_black": 11.2,
+   "eye_vs_body": 9.3
+  },
+  "skateboard": {
+   "body_vs_black": 12.1,
+   "eye_vs_body": 10.0
+  },
+  "balloon": {
+   "body_vs_black": 9.2,
+   "eye_vs_body": 7.6
+  },
+  "rocket": {
+   "body_vs_black": 12.1,
+   "eye_vs_body": 10.1
+  }
+ },
+ "frame_diff": {
+  "dog": [
+   0.577,
+   0.701,
+   0.488,
+   0.562
+  ],
+  "rabbit": [
+   0.585,
+   0.691,
+   0.492,
+   0.478
+  ],
+  "turtle": [
+   0.5,
+   0.459,
+   0.405,
+   0.438
+  ],
+  "duck": [
+   0.572,
+   0.651,
+   0.418,
+   0.365
+  ],
+  "squirrel": [
+   0.687,
+   0.729,
+   0.55,
+   0.623
+  ],
+  "train": [
+   0.519,
+   0.484,
+   0.373,
+   0.42
+  ],
+  "bike": [
+   0.823,
+   0.756,
+   0.761,
+   0.583
+  ],
+  "skateboard": [
+   0.777,
+   0.6,
+   0.85,
+   0.453
+  ],
+  "balloon": [
+   0.466,
+   0.484,
+   0.535,
+   0.519
+  ],
+  "rocket": [
+   0.365,
+   0.414,
+   0.361,
+   0.324
+  ]
+ }
+}
